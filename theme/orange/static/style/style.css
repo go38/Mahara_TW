@@ -1,0 +1,632 @@
+/**
+ * Mahara: Electronic portfolio, weblog, resume builder and social networking
+ * Copyright (C) 2006-2007 Catalyst IT Ltd (http://www.catalyst.net.nz)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author     Paul Walker <paul.walker@catalyst-eu.net>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
+ * @copyright  (C) 2009 Catalyst IT Europe http://catalyst-eu.net
+ */
+/* Theme Created by 3rd Wave Media */
+
+/* General rules */
+html, body {height: 100%;}
+body {
+	color: #555;
+	text-align:center;
+}
+acronym {
+    border-bottom: 1px dotted #FF7D3F;
+}
+a, a:visited, a:link, a:active {
+    color: #FF7D3F;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6{margin-bottom:10px;}
+h1,
+h2 {
+    color: #666;
+    font-family: Arvo, Georgia, Times, serif;
+}
+h3, 
+h4 {
+    color: #666;
+}
+h5,
+h6 {
+    color: #666;
+}
+
+pre, code, tt{font-size:14px;}
+
+/**************************** Tables ****************************/
+
+
+.main-column thead th {
+    color: #FF7F50;
+	border-bottom: 1px solid #ccc;
+}
+.main-column tbody th {
+    color: #FF7F50;
+    
+}
+/* table with th border-bottom */
+#searchresults thead th,
+.filelist,
+.tag-results #results {
+	border-bottom: 1px solid #ccc;
+}
+/* table with tfoot border-top */
+#searchresults tfoot td,
+#adminstitutionslist tfoot td,
+#profileicons tfoot td,
+#activitylist tfoot td {
+	border-top: 1px solid #ccc;
+}
+.tablerenderer-loading {
+}
+/* Alternative row background colours */
+.r0,
+.r0 td {
+    background-color: #fafbf7;
+}
+.r1,
+.r1 td {
+    background-color: #f3f7ec;
+}
+tr.folder td {
+	background-color: #f4f7f9 !important;
+}
+
+/**************************** Pagination ****************************/
+div.pagination a {
+	background-color: #FF7F50;
+	border: 1px solid #D96935;
+	color:#fff;
+}
+
+/**************************** Forms ****************************/
+/* Label */
+label {
+	color: #666;
+}
+/* required */
+.required th, .required label, .requiredmarker, #register_tandc_container th {
+    color: #FF4F45;
+}
+/* override required colour to normal colour */
+.required label.plain, .required.radio td label, .required.emaillist td label {
+	color: #474220;
+}
+/* description */
+.pieform td.description {
+	color: #7d7d7d;
+}
+
+/* Legend */
+legend {
+	color: #666;
+	font-size:16px;
+	font-family: Arvo, Georgia, Times, serif;
+	
+}
+
+/* Select */
+select {
+    border: 1px solid #D1D1D1;
+    font-size:12px;
+}
+
+/* Fieldset */
+fieldset {
+    border: none;
+    margin-bottom:20px;
+}
+
+
+/* Text fields and such */
+input.text, 
+input.password, 
+input.file,
+input[type=text],
+input[type=password],
+input[type=file] {
+    border: 1px solid #D1D1D1;
+    line-height:1;
+    height:24px;
+    padding:0;
+    padding-left:2px;
+    font-size:12px;
+}
+
+textarea {border:1px solid #d1d1d1; padding:0; height:160px;font-size:12px;}
+
+/****************************** Buttons ****************************/
+/** input buttons **/
+.btn,
+input.submit,
+input.cancel,
+button,
+.buttondk,
+input.button,
+input.select,
+input#files_filebrowser_edit_artefact,
+ul.groupuserstatus li a {
+	border: none;
+	background: #FF7D3F;
+	color: #FFF !important;
+	background-image:none;
+	padding:5px 10px;
+	font-weight:bold;
+	cursor:pointer;
+	font-size:12px;
+}
+/** hover for buttons **/
+.btn:hover,
+input.submit:hover,
+input.cancel:hover,
+button:hover,
+.buttondk:hover,
+input.button:hover,
+input.select:hover,
+input#files_filebrowser_edit_artefact:hover,
+ul.groupuserstatus li a:hover {
+	background: #DF6C36;
+	text-decoration: none;
+}
+/** Depress for buttons **/
+.btn:active,
+input.submit:active,
+input.cancel:active,
+button:active,
+.buttondk:active,
+input.button:active,
+input.select:active,
+input#files_filebrowser_edit_artefact:active,
+ul.groupuserstatus li a:active {
+	border-color: #496000 #d5ed8a #d5ed8a #496000;
+	background: #94a44a url(../images/btn-bkgd-hover.gif) repeat-x left 1px;
+	color: #FFF;
+}
+
+/* buttons that look like links with icons */
+.icon {
+	color: #6e8e00;
+}
+/* except those that shouldn't */
+span.btn a.icon, a span.icon {
+	color: #FFF;
+}
+/* buttons that look like links */
+.linkbtn {
+	color: #6e8e00; 
+}
+
+/* Search buttons */
+#usf_submit,
+#usf_submit:hover {
+	background-image: none;
+	border: 0;
+	cursor: pointer;
+	vertical-align: bottom;
+	height: 25px;
+	width: 25px;
+	margin-left: 2px;
+	font-size:12px;
+	background:#FF7F50;
+}
+
+#selfsearch button,
+.query-button,
+#moderator_search_btn,
+#search_search,
+#selfsearch button,
+#search_submit,
+.btn-search,
+#selfsearch button:hover,
+.query-button:hover,
+#moderator_search_btn:hover,
+#search_search:hover,
+#selfsearch button:hover,
+#search_submit:hover,
+.btn-search:hover {
+	background-image:none;
+	border: 0;
+	cursor: pointer;
+	vertical-align: bottom;
+	height: 25px;
+	width: auto;
+	margin-left: 2px;
+	padding-left:10px;
+	padding-right:10px;
+	background:#FF7F50;
+}
+
+
+/**************************** Top of page elements ****************************/
+#container, #containerX {
+    background: #eee;
+    min-height:100%;
+    height:100%;
+    margin: 0 !important;
+    max-width:none !important;
+    min-width:none !important;
+    width: auto !important;
+    text-align:left;
+    font-size:13px;
+}
+#top-wrapper {
+    width:auto;
+    background: #FFA24B;
+    border-bottom: 10px solid #D56318;
+}
+#containerX #top-wrapper {
+	height: auto;
+}
+#loading-box {
+    background-color: #ECF3D4 !important;
+}
+
+.top-wrapper-inner{width:896px; margin:0 auto; padding:0 48px;height:110px;padding-top:10px;}
+
+
+#site-logo {
+    padding: 0;
+    background:url(../images/site-logo.png) no-repeat left top;
+    font-size: 26px;
+    margin: 0;
+    padding-left: 110px;
+    height: 65px;
+    padding-top: 35px;
+    color: #fff;
+}
+#top-wrapper ul,
+#top-wrapper li {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    display: inline;
+}
+/* Search and language bar */
+#language-select, #usf {
+	font-size: .8333em !important;
+}
+#usf_query_container input {
+    color: #767676;
+	background-color: #fff;
+	width: 205px;
+	height:24px;
+	padding:0;
+	padding-left:2px;
+}
+
+/**************** TOP NAVIGATION ****************/
+.nav-wrapper{width:auto;  clear:both; }
+
+#right-nav li a{color:#fff;padding:5px 10px;font-weight:bold;}
+#main-nav {width:896px; margin:0 auto; padding: 0 48px; background:#FF7F50;font-size:14px;  overflow:hidden; }
+#main-nav li {
+    color: #666;
+    * zoom: 1;
+    
+}
+#main-nav li a,
+#main-nav li a:link,
+#main-nav li a:visited,
+#main-nav li a:active {
+	border-right:1px solid #FFA24B;
+    color: #FFF;
+	font-size: 12px;
+	height: 25px;
+	line-height: 25px;
+    text-decoration: none;
+	display: block;
+	float: left;
+	padding: 5px 10px;
+}
+#main-nav li a:hover {
+    color: #666;
+    text-decoration: none;
+}
+#main-nav li.selected a,
+#main-nav li.selected a:link,
+#main-nav li.selected a:visited,
+#main-nav li.selected a:active {
+    color: #D56318;
+	background: #F5D170;
+}
+
+
+/**************** SUB NAVIGATION ****************/
+#sub-nav {
+    font-size: 12px;
+    font-weight: bold;
+    background: #F5D170;
+    line-height:30px;
+    height:auto;
+	border: none;
+	width:896px; margin:0 auto; padding: 0 48px;
+	
+}
+#sub-nav ul {
+    padding: 0 0 0 5px;
+	background: none;
+}
+#sub-nav li a,
+#sub-nav li a:link,
+#sub-nav li a:visited,
+#sub-nav li a:active {
+    color: #666;
+	
+    padding: 5px 10px;
+	background:none ;
+}
+#sub-nav li a:hover {
+    color: #D56318;
+    text-decoration: none;
+    background:none;
+}
+#sub-nav li.selected a,
+#sub-nav li.selected a:link,
+#sub-nav li.selected a:visited,
+#sub-nav li.selected a:active {
+	background:none ;
+    color: #D56318;
+   
+}
+
+/**************** Main Wrapper *************************/
+.main-wrapper-inner{width:896px; margin:0 auto;padding:10px 48px; padding-bottom:20px; background:#fff;}
+.main-column{padding:0;}
+.main-column h1{font-size:18px;line-height:1.5;}
+.main-column h4{font-size:14px;color:#FF7D3F;line-height:1.5}
+.main-column .listing h3{margin-bottom:10px;}
+.main-column .pieform tbody th{padding:0;}
+#potentialpresetitems h6{color:#FF7D3F;margin-bottom:10px;}
+
+
+/**************** IN PAGE TAB NAVIGATION ****************/
+ul.in-page-tabs {
+  line-height: 25px;
+  height: 25px;
+  font-size: 12px;
+  background: url(../images/tabs-bg.gif) repeat-x left top;
+  display: block;
+  padding-left: 1px;
+}
+ul.in-page-tabs li {
+  float: left;
+  height: 25px;
+  margin: 0 !important;
+  background: none;
+  line-height: 25px;
+}
+ul.in-page-tabs li a,
+ul.in-page-tabs li a:link,
+ul.in-page-tabs li a:visited,
+ul.in-page-tabs li a:active {
+  color: #666;
+  padding: 5px 12px 4px 10px;
+  text-decoration: none;
+  background: transparent url(../images/tabs-divider.gif) no-repeat right top;
+  border-right: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+}
+ul.in-page-tabs li a:hover {
+  color: #333;
+}
+ul.in-page-tabs li a.current-tab,
+ul.in-page-tabs li a.current-tab:link,
+ul.in-page-tabs li a.current-tab:visited,
+ul.in-page-tabs li a.current-tab:active {
+  background: #FF7D3F;
+  color: #fff;
+  border-bottom: 1px solid #FFF;
+  padding: 5px 12px 4px 10px;
+}
+.subpage {
+	display: block;
+	border-top: 0;
+}
+
+
+/**************** SIDEBAR *********/
+#left-column,
+#right-column {
+    padding: 0;
+    margin-top:20px;
+}
+div.sideblock {
+    background: none;
+    border:1px solid #ccc;
+    margin-bottom:20px;
+    padding:5px;
+}
+div.sideblock h3{
+    background: #FF7F50;
+	color: #fff;
+	padding:5px 10px;
+	line-height:1;
+	font-size:16px;
+}
+
+div.sideblock h3 a,
+div.sideblock h3 a:link,
+div.sideblock h3 a:visited,
+div.sideblock h3 a:active {
+	color: #fff;
+}
+div.sideblock h3 a:hover {
+	color: #fff;
+}
+#lastminutes{color:#fff;padding-top:5px;padding-right:5px;}
+
+/* Side Login */
+#sb-loginbox input.text,
+#sb-loginbox input.password {
+    width: 225px;
+	border: 1px solid #d1d1d1;
+}
+#sb-loginbox label {
+	color: #666;
+}
+
+/* Side Profile */
+#sb-profile ul ul a,
+#sb-profile ul ul a:link,
+#sb-profile ul ul a:visited,
+#sb-profile ul ul a:active {
+	color: #7f9d16;
+}
+#sb-profile li#pendingfriends a,
+#sb-profile li#pendingfriends a:link,
+#sb-profile li#pendingfriends a:visited,
+#sb-profile li#pendingfriends a:active {
+	color: #3986c3 !important;
+}
+
+
+/* Side Quota Bar */
+#quota_used {
+    color: #3986c3;
+}
+#quota_total {
+    color: #7f9d16;
+}
+
+/* Side Search */
+.sidebar #selfsearch input {
+	width: 186px;
+    padding: 3px 5px;
+    font-size: 1em;
+    color: #767676;
+	background-color: #ecf3d4;
+}
+
+/******************** FOOTER ****************************/
+#footer-wrap {
+    background: #fff;
+	border: 0;
+    color: #555;
+    width:896px; 
+    padding:20px 48px;
+    margin:0 auto;
+    
+}
+#micro #footer-wrap {
+	background: #939393;
+    color: #bababa;
+}
+#footernav {
+    color: #bababa;
+}
+#footernav a,
+#footernav a:link,
+#footernav a:active,
+#footernav a:visited {
+    color: #FF7D3F;
+}
+#footernav a:hover {
+    color: #FF7D3F;
+}
+#powered-by {
+}
+#performance-info {
+	color: #bababa;
+}
+#performance-info span {
+	color: #999;
+}
+#performance-info a,
+#performance-info a:hover {
+	color: #bababa;
+	text-decoration: none;
+}
+#version {
+	color: #666;
+	margin-top:20px;
+	margin-bottom:0;
+}
+#release {
+	color: #999;
+}
+#release a {
+    color: #666;
+}
+
+
+/* Group: members (Add members) */
+#addmembers {
+	background-color: #EBF0F4;
+	border: 1px solid #95A8B7;
+}
+
+/* Settings > Preferences */
+#accountprefs table label,
+#accountprefs table th {
+	color: #666;
+}
+#accountprefs table td label {
+	color: #333333;
+	font-size: 1em;
+}
+#accountprefs table h3{line-height:1.5;padding-bottom:5px;}
+
+/* Home page info boxes */
+.home-info {
+    border: solid 2px #cccccc;
+    background: #eeeeee;
+}
+.home-info p.subtitle {
+    border-top: solid 1px #cccccc;
+    border-bottom: solid 1px #cccccc;
+    padding:2px 0;
+    font-size:14px;
+}
+.home-info-table {
+	border: 0;
+}
+
+.home-info  h3{font-family:Arial, Helvetica, sans-serif;font-size:14px;}
+
+/* Collections */
+#collectionviews {
+	background: #f6f6f6;
+}
+#collectionviews table {
+    width: 100%;
+}
+* html #collectionviews table,
+* html #collectionviews {
+	width: 96%;
+}
+#collectionviews td.displayordercontrols div {
+	padding-top: 5px;
+}
+#collectionviews td.displayordercontrols div.justdown {
+    padding-left: 19px;
+}
+
+.inbox-message {
+	background: #FAFBF7;
+}
+
+.attachments tbody th {
+	color: #333;
+}

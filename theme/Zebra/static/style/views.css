@@ -1,0 +1,157 @@
+/* Color Guide:
+ * 
+ * no hash on these values, so if you're doing a find and replace include
+ * the hash and you won't mess up these comments so you can restore to default.
+ *
+ * Body background, borders:    ddd
+ * Links:                       234b6f
+ * Hovering:                    4e7ba3
+ * Content background:          f4f6f8
+ * Fonts, date background:      2f2f2f
+ */
+
+/* ==|== Editor view ======================================================== */
+
+#page {
+    margin: 0;
+    padding: 0;
+}
+
+#page #top-pane {
+    background: transparent;
+}
+
+#page #bottom-pane {
+    background: transparent!important;
+    border: 1px solid #ddd;
+}
+
+#middle-pane {
+    background: #ddd;
+}
+
+#blocktype-list {
+    background: transparent;
+    border: 1px solid #ddd;
+}
+
+/* make sure the tabs are on top of the subpage */
+#category-list ul {
+    font-weight: normal;
+    z-index: 1;
+    padding: 0 8px;
+}
+
+/* Kind of like a subpage */
+#category-list li a,
+#category-list li a:link,
+#category-list li a:visited,
+#category-list li a:active {
+    background: transparent;
+}
+
+/* make the links look like tabs */
+#category-list li a {
+    border: 1px solid #ddd;
+    margin-bottom: -1px;
+}
+
+/* make the active tab look active and not like a link */
+#category-list li.current a,
+#category-list li.current a:link,
+#category-list li.current a:visited,
+#category-list li.current a:active {
+    cursor: pointer;
+    border-bottom: 1px solid #f4f6f8;
+    background: transparent!important;
+    color: #2f2f2f;
+}
+
+/* ==|== blocks ============================================================= */
+
+.blockinstance.configure {
+    background: #f4f6f8;
+    border: 7px solid #ddd;
+}
+
+/* make sure the tabs are on top of the subpage */
+ul.artefactchooser-tabs {
+    font-weight: normal;
+    z-index: 1;
+    padding: 0 8px;
+}
+
+ul.artefactchooser-tabs li a,
+ul.artefactchooser-tabs li a:link,
+ul.artefactchooser-tabs a:visited,
+ul.artefactchooser-tabs li a:active {
+    background: transparent;
+}
+
+/* make the links look like tabs */
+ul.artefactchooser-tabs li a {
+    border: 1px solid #ddd;
+    margin-bottom: -1px;
+}
+
+/* make the active tab look active and not like a link */
+ul.artefactchooser-tabs li.current a,
+ul.artefactchooser-tabs li.current a:link,
+ul.artefactchooser-tabs li.current a:visited,
+ul.artefactchooser-tabs li.current a:active,
+ul.artefactchooser-tabs li.current a:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #f4f6f8;
+    background: transparent;
+    color: #2f2f2f;
+}
+
+/* ==|== Pages ============================================================== */
+
+.viewfooter {
+    border: 0 none;
+}
+
+#feedbacktable .attachmessage,
+#viewmenu {
+    color: #2f2f2f;
+}
+
+#feedback_pagination {
+    background-color: transparent;
+    border-top: 0 none;
+}
+
+#feedbacktable td {
+    padding: 3px;
+}
+
+/* ==|== Artefacts ========================================================== */
+#view .filedata-icon {
+    background: white; /* Not using a hex here to prevent it from being replaced */
+    border: 1px solid #ddd;
+}
+
+/* ==|== Overrides ========================================================== */
+
+#bottom-pane {
+    margin: 0 0 4px 0;
+}
+
+#column-container {
+    background: transparent;
+}
+
+/* Some crazy columns tweaks */
+
+/* two columns */
+#column_1.columns2 {
+    padding-left: 0;
+    width: 49%;
+}
+
+#column_2.columns2 {
+    padding-right: 0;
+    float: right;
+    width: 49%;
+}

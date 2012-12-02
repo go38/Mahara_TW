@@ -1,0 +1,501 @@
+/**
+ * Mahara: Electronic portfolio, weblog, resume builder and social networking
+ * Copyright (C) 2006-2012 Catalyst IT Ltd (http://www.catalyst.net.nz)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author     Paul Walker <paul.walker@catalyst-eu.net>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
+ * @copyright  (C) 2006-2012 Catalyst IT Europe http://catalyst-eu.net
+ */
+
+/* General rules */
+body, body#micro {
+    background: #0B1960 url(../images/bg.jpg) repeat-x top center;
+}
+a, a:visited, a:link, a:active {
+    color: #1F97D5;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #14336F;
+    text-decoration: underline;
+}
+h1,
+h2 {
+    color: #1A428F;
+}
+h3 {
+    color: #1e6297;
+}
+h4 {
+    color: #3986c3;
+}
+h5 {
+    color: #333333;
+}
+h6 {
+    color: #1e6297;
+}
+.description,
+.unvalidated,
+.postdetails,
+.postedon {
+    color: #838383;
+}
+
+/**************************** Tables ****************************/
+.main-column thead th {
+	border-bottom: 1px solid #14436F;
+}
+.main-column tbody th {
+	border-bottom: none;
+}
+/* table with th border-bottom */
+#searchresults thead th,
+.filelist,
+.tag-results #results {
+	border-bottom: 1px solid #14436F;
+}
+/* table with tfoot border-top */
+#searchresults tfoot td,
+#adminstitutionslist tfoot td,
+#profileicons tfoot td,
+#activitylist tfoot td {
+	border-top: 1px solid #14436F;
+}
+.tablerenderer-loading {
+    border: 1px solid #f4f7f9;
+	background-color: #f4f7f9;
+    color: #1e6297;
+}
+/* table with th border-bottom */
+#searchresults thead th {
+	border-bottom: 1px solid #14436F;
+}
+/* table with border-bottom */
+#searchresults tfoot td {
+	border-top: 1px solid #14436F;
+}
+/* Alternative row background colours */
+.r0, .r0 td, .d0, .friends {
+    background-color: #e9f1f6;
+}
+.r1, .r1 td, .d1 {
+    background-color: #f4f7f9;
+}
+
+/**************************** Pagination ****************************/
+div.pagination a {
+	background-color: #f4f7f9;
+}
+
+/**************************** Forms ****************************/
+/* required */
+.required th, .required label, .requiredmarker, #register_tandc_container th {
+    color: #c81511;
+}
+/* override required colour to normal colour */
+.required label.plain, .required.radio td label, .required.emaillist td label {
+	color: #333333;
+}
+
+/* Fieldset */
+fieldset {
+    border: 1px solid #14436F;
+}
+/****************************** Buttons ****************************/
+/** input buttons **/
+.btn,
+input.submit,
+input.cancel,
+button,
+.buttondk,
+input.button,
+input.select,
+input#files_filebrowser_edit_artefact,
+ul.groupuserstatus li a {
+	background: #0b1962 url(../images/btn-bkgd.gif) repeat-x top;
+	border-color: #476ee2 #011e3a #011e3a #476ee2;
+	color: #FFF !important;
+}
+/** hover for buttons **/
+.btn:hover,
+input.submit:hover,
+input.cancel:hover,
+button:hover,
+.buttondk:hover,
+input.button:hover,
+input.select:hover,
+input#files_filebrowser_edit_artefact:hover,
+ul.groupuserstatus li a:hover {
+	background: #012cac url(../images/btn-bkgd-hover.gif) repeat-x top;
+	border-color: #011e3a #476ee2 #476ee2 #011e3a;
+	color: #FFF;
+}
+/** Depress for buttons **/
+.btn:active,
+input.submit:active,
+input.cancel:active,
+button:active,
+.buttondk:active,
+input.button:active,
+input.select:active,
+input#files_filebrowser_edit_artefact:active,
+ul.groupuserstatus li a:active {
+	background: #012cac url(../images/btn-bkgd-hover.gif) repeat-x 1px;
+	border-color: #011e3a #476ee2 #476ee2 #011e3a;
+	color: #FFF;
+}
+/* buttons that look like links with icons */
+.icon {
+	color: #1F97D5;
+}
+/* buttons that look like links */
+.linkbtn, #main-column-container ul.actionlist li.friend form input, #main-column-container ul.actionlist li.approvefriend form input, #userview .user-icon form div.submit input.submit {
+	color: #1F97D5 !important;
+    text-decoration: none;
+}
+/* links that need to look like buttons */
+span.btn a.icon, a span.icon {
+	color: #FFFFFF;
+}
+/* Search buttons */
+#usf_submit,
+#usf_submit:hover {
+	background: transparent url(../images/btn-search.png) no-repeat !important;
+	border: 0;
+	color: #1F97D5;
+	text-indent: -999px;
+	font-size: 1%;
+	cursor: pointer;
+	vertical-align: bottom;
+	height: 24px;
+	width: 24px;
+	margin-left: 2px;
+}
+
+/**************************** Top of page elements ****************************/
+#container, #containerX {
+    max-width: 1232px;
+}
+#top-wrapper {
+    background: transparent url(../images/bg-container.jpg) no-repeat top center;
+    width: 95%;
+}
+#containerX #top-wrapper {
+	background: transparent url(../images/bg-container.jpg) no-repeat top center;
+}
+#loading-box {
+    background-color: #ECF3D4 !important;
+}
+#site-logo {
+    margin: 12px 5px 0 0
+}
+/* Search and language bar */
+#usf_query_container input {
+    color: #333333;
+}
+#mainmiddle {
+    width: 95%;
+    background: #FFFFFF;
+}
+#header-right label {
+	color: #FFFFFF;
+}
+#right-nav li {
+	color: #8fa3df;
+}
+#right-nav li a {
+	color: #fff;
+}
+#right-nav li.identity a {
+	color: #8fa3df;
+}
+#right-nav li.selected a {
+  color: #fff;
+  text-decoration: underline;
+}
+/**************** TOP NAVIGATION ****************/
+#main-nav {
+    background: none;
+}
+#main-nav ul {
+	float: right;
+}
+#main-nav li {
+    color: #FFFFFF;
+    font-weight: normal;
+	margin: 0 0 0 3px;
+}
+.main-nav li a,
+.main-nav li a:link,
+.main-nav li a:visited,
+.main-nav li a:active {
+	background: #00084F;
+    color: #FFFFFF;
+}
+#main-nav li a:hover {
+    color: #1F97D5;
+    text-decoration: underline;
+}
+.main-nav li.selected a,
+.main-nav li.selected a:link,
+.main-nav li.selected a:visited,
+.main-nav li.selected a:active {
+    color: #14336F;
+	background: #FFFFFF;
+}
+/**************** SUB NAVIGATION ****************/
+#sub-nav {
+    font-weight: bold;
+    text-align: left;
+    background: #FFF;
+    height: 26px;
+	border: 0;
+	border-bottom: 1px solid #DDD;
+}
+#sub-nav ul {
+    float:right;
+	background: #FFF;
+}
+#sub-nav li {
+    margin: 0 !important;
+}
+#sub-nav li a,
+#sub-nav li a:link,
+#sub-nav li a:visited,
+#sub-nav li a:active {
+    color: #14336F;
+}
+#sub-nav li a:hover {
+    color: #1A428F;
+    text-decoration: underline;
+}
+#sub-nav li.selected {
+	background: transparent;
+}
+#sub-nav li.selected a,
+#sub-nav li.selected a:link,
+#sub-nav li.selected a:visited,
+#sub-nav li.selected a:active {
+    color: #0B1960;
+    text-decoration: underline;
+}
+
+/**************** DROPDOWN NAVIGATION ****************/
+#main-nav .dropdown-sub {
+    left: -3px;
+}
+.main-nav .dropdown-sub li a, .main-nav .dropdown-sub li a:link, .main-nav .dropdown-sub li a:visited, .main-nav .dropdown-sub li a:active {
+    background: #00084f;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#main-nav .dropdown-sub li a:hover {
+    background: #0b1960;
+    color: #1F97D5;
+    text-decoration: none;
+}
+
+/**************** IN PAGE TAB NAVIGATION ****************/
+ul.in-page-tabs,
+ul.edit-view-tabs {
+    background: 0;
+}
+ul.in-page-tabs li a, ul.in-page-tabs li a:link, ul.in-page-tabs li a:visited, ul.in-page-tabs li a:active, ul.in-page-tabs li input.linkbtn,
+ul.edit-view-tabs li a, ul.edit-view-tabs li a:link, ul.edit-view-tabs li a:visited, ul.edit-view-tabs li a:active {
+  color: #FFF;
+  background: #00084F;
+    margin: 0 4px 0 0;
+}
+ul.in-page-tabs li a:hover,
+ul.in-page-tabs li input.linkbtn:hover,
+ul.edit-view-tabs li a:hover {
+  text-decoration: underline;
+  color: #1F97D5;
+}
+ul.in-page-tabs li a.current-tab, ul.in-page-tabs li a.current-tab:link, ul.in-page-tabs li a.current-tab:visited, ul.in-page-tabs li a.current-tab:active, ul.in-page-tabs li input.linkbtn.current-tab,
+ul.edit-view-tabs li a.current-tab, ul.in-page-tabs li a.current-tab:link, ul.edit-view-tabs li a.current-tab:visited, ul.edit-view-tabs li a.current-tab:active {
+  color: #14336F;
+}
+
+.subpage {
+	border: 1px solid #ddd;
+	border-top: 5px solid #d1d1d1;
+}
+
+/**************** MAIN CONTENT *****************/
+#main-column-container {
+    padding: 10px 15px;
+}
+
+/**************** SIDEBAR ******************/
+#left-column,
+#right-column {
+	background: #F4F7F9 url(../images/pixel_grey.gif) repeat-y top left;
+}
+div.sideblock {
+	border-bottom: 1px solid #DDD;
+}
+div.sideblock h3 a,
+div.sideblock h3 a:link,
+div.sideblock h3 a:visited,
+div.sideblock h3 a:active {
+	color: #1E6297;
+}
+div.sideblock h3 a:hover {
+	color: #267bbd;
+}
+
+/* Side Login */
+#sb-loginbox label {
+	color: #1A428F;
+}
+
+/* Side Profile */
+#sb-profile ul a,
+#sb-profile ul a:link,
+#sb-profile ul a:visited,
+#sb-profile ul a:active {
+	color: #1A428F;
+}
+#sb-profile ul ul a,
+#sb-profile ul ul a:link,
+#sb-profile ul ul a:visited,
+#sb-profile ul ul a:active {
+	color: #1F97D5;
+}
+#sb-profile li#pendingfriends a,
+#sb-profile li#pendingfriends a:link,
+#sb-profile li#pendingfriends a:visited,
+#sb-profile li#pendingfriends a:active {
+	color: #1F97D5 !important;
+}
+
+
+/* Side Quota Bar */
+#quota_used {
+    color: #3986c3;
+}
+#quota_bar,
+#quota_bar_100 {
+    background: url(../images/quota_bar_bg.gif) no-repeat left top;
+    color: #FFF;
+}
+#quota_fill {
+    background: url(../images/quota_bar_highlight.gif) repeat-x;
+}
+
+
+/******************** FOOTER ****************************/
+#footer-wrap {
+    background-color: #0B1960;
+    color: #FFFFFF;
+    width: 95%;
+}
+#footer a,
+#footer a:link,
+#footer a:visited,
+#footer a:active,
+#footer a:hover {
+    color: #FFFFFF;
+}
+/****************************** PAGE BY PAGE STYLES **********************************/
+/* Settings > Preferences */
+#accountprefs table h3 {
+	border-bottom: 1px dotted #888888
+}
+.viewheader a {
+	color: #FFF;
+}
+.viewheader .title {
+	color: #FFF;
+}
+/* Forum list */
+#forumslist th {
+    border-bottom: 1px solid #14436F;
+}
+.forumpostleft {
+    background: #e9f1f6;
+}
+/* Posts */
+.forumpost {
+    background-color: #e9f1f6;
+    border: 2px solid #e9f1f6;
+}
+/* Topic list */
+#forumtopicstable th {
+    border-bottom: 1px solid #14436F;
+}
+/* topic types */
+.stickytopic td {
+    background-color: #ceeafe;
+}
+/* admin & moderator */
+.groupadmin {
+    color: #3366CC;
+}
+.moderator {
+    color: #993399;
+}
+#containerX #top-wrapper a,
+#containerX #top-wrapper a:hover,
+#containerX #top-wrapper a:active {
+	color: #ffffff;
+}
+/* Collections */
+#collectionnavwrap {
+    background: #F4F7F9;
+}
+.group-info {
+	background:	#F4F7F9;
+	border: 0;
+}
+/* Persona button */
+/* Link body */
+a.persona-button {
+	background: #0b1962;
+	background: -moz-linear-gradient(top, #012cac, #0b1962);
+	background: -ms-linear-gradient(top, #012cac, #0b1962);
+	background: -o-linear-gradient(top, #012cac, #0b1962);
+	background: -webkit-linear-gradient(top, #012cac, #0b1962);
+	background: linear-gradient(top, #012cac, #0b1962);
+}
+a.persona-button:hover {
+	background: #012cac;
+	background: -moz-linear-gradient(top, #0b1962, #012cac);
+	background: -ms-linear-gradient(top, #0b1962, #012cac);
+	background: -o-linear-gradient(top, #0b1962, #012cac);
+	background: -webkit-linear-gradient(top, #0b1962, #012cac);
+	background: linear-gradient(top, #0b1962, #012cac);
+}
+/*  Icon background */
+a.persona-button span:before {
+	background: #3c3c3c;
+	background: -moz-linear-gradient(top, #606060, #3c3c3c);
+	background: -ms-linear-gradient(top, #606060, #3c3c3c);
+	background: -o-linear-gradient(top, #606060, #3c3c3c);
+	background: -webkit-linear-gradient(top, #606060, #3c3c3c);
+	background: linear-gradient(top, #606060, #3c3c3c);
+}
+/* Triangle */
+a.persona-button:before {
+    background: #3c3c3c;
+    background: -moz-linear-gradient(-45deg, #606060, #3c3c3c);
+	background: -ms-linear-gradient(-45deg, #606060, #3c3c3c);
+	background: -o-linear-gradient(-45deg, #606060, #3c3c3c);
+	background: -webkit-linear-gradient(-45deg, #606060, #3c3c3c);
+	background: linear-gradient(-45deg, #3c3c3c, #606060); /* flipped for updated spec */
+}
