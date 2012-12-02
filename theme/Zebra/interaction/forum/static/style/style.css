@@ -1,0 +1,272 @@
+/* Color Guide:
+ * 
+ * no hash on these values, so if you're doing a find and replace include
+ * the hash and you won't mess up these comments so you can restore to default.
+ *
+ * Body background, borders:    ddd
+ * Links:                       234b6f
+ * Hovering:                    4e7ba3
+ * Content background:          f4f6f8
+ * Fonts, date background:      2f2f2f
+ */
+ 
+/* top buttons */
+#forumbtns {
+    right: 10px;
+    top: 10px;
+    * top: -30px;
+    * right: 0;
+}
+
+* html #forumbtns {
+    right: 30px;
+}
+
+#forumbtns a.btn {
+    * display: block;
+    * float: left;
+}
+
+#forumbtns .editforum {
+    font-weight: bold;
+}
+
+/* forum description */
+#forumdescription {
+    margin: 5px 0;
+    clear: both;
+}
+
+/* Edit and Delete in list */
+.btn-spacer a {
+    margin-left: 10px;
+}
+
+.btn-spacer a.btn-big-del {
+    margin-left: 3px;
+}
+
+/* Forum list */
+#forumslist{
+    border-bottom: 1px solid #ddd;
+}
+
+#forumslist th{
+    border-bottom: 1px solid #ddd;
+}
+
+#forumslist table th,
+#forumslist table td {
+    background: none;
+    padding-top: 0;
+    border: 0;
+}
+
+#forumslist td .inlinelist {
+    font-size: .9167em;
+    line-height: 1.8em;
+}
+
+#forumslist td .inlinelist span {
+    font-weight: bold;
+}
+
+#forumslist td.right {
+    width: 60px;
+}
+
+/* Topic list */
+#viewforum {
+    padding: 10px;
+    margin: 0;
+    border: 0 none;
+}
+
+#viewforum h3 {
+    font-size: 1.3333em;
+}
+
+#viewforum .rbuttons {
+    right: 10px;
+    top: 10px;
+    * top: -30px;
+    * right: 0;
+}
+
+* html #viewforum .rbuttons {
+    right: 35px;
+}
+
+/* to get user picts to align with text */
+.forumuser,
+.inlinelist a img {
+    vertical-align: top;
+}
+
+/* topic types */
+.stickytopic td {
+    background-color: #234b6f;
+    color: #ddd;
+    border-bottom: 0 none;
+}
+
+.stickytopic td a {
+    color: #f4f6f8;
+}
+
+#forumtopicstable h4 {
+    margin: 0;
+}
+
+#forumtopicstable td.narrow {
+    width: 15px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    #forumtopicstable td div.btn-spacer {
+        width: 50px;
+        text-align: right;
+    }
+}
+
+#forumtopicstable td br {
+    line-height: .3333em;
+}
+
+#forumtopicstable td.right {
+    width: 60px;
+}
+
+/* Forum Pagination */
+#viewforum div.pagination {
+    background: transparent;
+    margin: 0;
+    padding: 5px 3px;
+}
+
+#viewforum div.pagination .results {
+    display: inline;
+    padding: 3px 5px;
+}
+
+/* Forum Action Selector */
+.forumselectwrap {
+    padding: 10px 0 0 0;
+}
+
+/* Forum footer */
+.forumfooter {
+    margin: 5px;
+}
+
+/* admin & moderator */
+.forummods {
+    font-size: .9167em;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.forummods .inlinelist {
+    vertical-align: middle;
+}
+
+.forummods a {
+    margin-right: 5px;
+}
+
+.groupadmin {
+    
+}
+
+.moderator {
+    
+}
+
+/* Posts */
+.closed {
+    margin: 0 0 10px 0;
+}
+
+.forumpost {
+    border: 1px solid #ddd;
+    clear: both;
+}
+
+.forumsubject {
+    background: #ddd;
+    border-bottom: 0 none;
+}
+
+.forumsubject h6 {
+    margin: 0 !important;
+}
+
+.forumpostleft {
+    width: 160px;
+    text-align: center;
+    font-size: .9167em;
+    background: transparent;
+    border-right: 1px solid #ddd;
+}
+
+.postedits .posttime {
+    color: #2f2f2f;
+    font-size: .9167em;
+    float: right;
+}
+
+/* make only the first paragraph clear the time incase there's images */
+.postedits p:first-of-type {
+    clear: right;
+}
+
+.forumpostleft .author img {
+    margin: 3px 5px 3px 3px;
+}
+
+.forumpostleft .author .poster {
+    color: #2f2f2f;
+    margin: 0;
+}
+
+.forumpostleft .author .postcount {
+    font-weight: normal;
+    margin: 0;
+    color: #2f2f2f;
+}
+
+.postedits {
+    padding: 10px;
+    background: transparent;
+}
+
+.postbtns {
+    font-size: .9167em;
+    text-align: right;
+    color: #2f2f2f;
+    margin: 5px 0 10px 0;
+}
+
+.postbtns a {
+    text-decoration: none;
+    cursor: default;
+}
+.postbtns span.btn a.icon {
+    margin-left: 0;
+}
+
+.deletedpost {
+    color: #ddd;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.postreply {
+    padding: 0 0 0 10px;
+}
+
+/* Post and topic editing*/
+.timeleftnotice {
+    margin-top: 0.8em;
+    font-size: .9167em;
+}

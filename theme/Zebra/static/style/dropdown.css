@@ -1,0 +1,74 @@
+/* Color Guide:
+ * 
+ * no hash on these values, so if you're doing a find and replace include
+ * the hash and you won't mess up these comments so you can restore to default.
+ *
+ * Body background, borders:    ddd
+ * Links:                       234b6f
+ * Hovering:                    4e7ba3
+ * Content background:          f4f6f8
+ * Fonts, date background:      2f2f2f
+ */
+
+/**************** OVERRIDES FROM STYLE.CSS ****************/
+
+#main-nav .dropdown-sub li:first-child {
+    border-radius: 0;
+}
+
+#main-nav .dropdown-sub li:first-child a {
+    text-indent: 0;
+    font-size: 13px;
+}
+/**************** MAIN NAVIGATION ********************/
+
+#main-nav.dropdown-main li {
+	position: relative;
+	height: auto;
+}
+/**************** SUB NAVIGATION *********************/
+#main-nav .dropdown-sub li {
+	z-index: 3000;
+}
+#main-nav .dropdown-sub {
+	display: none !important;
+	position: absolute;
+	top: 30px;
+	left:0;
+	z-index: 1000;
+}
+
+#main-nav .dropdown-sub li a,
+#main-nav .dropdown-sub li a:link,
+#main-nav .dropdown-sub li a:visited,
+#main-nav .dropdown-sub li a:active {
+	padding: 0 20px;
+	background: #2f2f2f;
+	border: 0 none;
+	width: 150px;
+	white-space: normal;
+        border-bottom:1px solid rgba(0, 0, 0, 0.4);
+        border-top:1px solid rgba(255, 255, 255, 0.1);
+}
+
+#main-nav .dropdown-sub li a:hover {
+    background-color:#234B6F;
+    border-bottom:1px solid #234B6F;
+    border-top:1px solid #234B6F;
+   
+}
+
+#main-nav .dropdown-sub li:first-child a:hover,
+#main-nav .dropdown-sub li.selected:first-child a,
+#main-nav .dropdown-sub li a:hover {
+        color:#f4f6f8;
+}
+
+#main-nav .dropdown-sub li.selected {
+	margin: 0;
+	background: transparent !important;
+}
+
+#main-nav li:hover .dropdown-sub {
+	display: block !important;
+}

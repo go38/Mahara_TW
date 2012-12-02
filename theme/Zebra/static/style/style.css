@@ -1,0 +1,1169 @@
+/* Color Guide:
+ * 
+ * no hash on these values, so if you're doing a find and replace include
+ * the hash and you won't mess up these comments so you can restore to default.
+ *
+ * Body background, borders:    ddd
+ * Links:                       234b6f
+ * Hovering:                    4e7ba3
+ * Content background:          f4f6f8
+ * Fonts, date background:      2f2f2f
+ */
+
+/* HTML5 ✰ Boilerplate
+ * ==|== normalize ========================================================== */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.231;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+    color: #222;
+}
+
+::-moz-selection {
+    background: #fe57a1;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fe57a1;
+    color: #fff;
+    text-shadow: none;
+}
+
+a {
+    color: #00e;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover, a:active {
+    outline: 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+dfn {
+    font-style: italic;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+q {
+    quotes: none;
+}
+
+q:before, q:after {
+    content: "";
+    content: none;
+}
+
+small {
+    font-size: 85%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+ul,
+ol {
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    border: 0;
+    *margin-left: -7px;
+    padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+button, input {
+    line-height: normal;
+    *overflow: visible;
+}
+
+table button,
+table input {
+    *overflow: auto;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+input:valid,
+textarea:valid {
+    
+}
+
+input:invalid, textarea:invalid {
+    background-color: #f0dddd;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    vertical-align: top;
+}
+
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        text-shadow: none !important;
+        filter:none !important;
+        -ms-filter: none !important;
+    } 
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+     
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    
+    thead {
+        display: table-header-group;
+    }
+    
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+    }
+    
+    @page {
+        margin: 0.5cm;
+    }
+    
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ==|== general layouts ==================================================== */
+
+body,
+body#micro {
+    background: url(../images/background.png) no-repeat top center #ddd;
+    color: #2f2f2f!important;
+    padding: 0 10px;
+}
+
+/* standardize font colors */
+.dull,
+#export .radio-description,
+.postedon,
+.blockinstance-content p.noartefacts,
+.blockinstance-content .description,
+#postlist td.postdetails,
+div.pagination .results,
+#postlist th.poststatus,
+#blocksinstruction,
+.date,
+.forumpostleft .author .postcount,
+.postedits .posttime,
+#version,
+span.btn a.icon,
+a span.icon {
+    color: #2f2f2f!important;
+}
+
+label {
+    margin-right: 5px;
+}
+
+hr {
+    border-top: 1px solid #ddd;
+}
+
+a,
+a:visited,
+a:link,
+a:active {
+    color:#234b6f;
+}
+
+a:hover,
+a:focus {
+    color: #4e7ba3;
+    outline: none;
+}
+
+a.url-open-editform {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: inherit;
+}
+
+#container,
+#containerX {
+    font-size: 13px;
+    max-width: 1140px;
+    background: transparent;
+    overflow: hidden;
+}
+
+/* ==|== header area ======================================================== */
+
+#site-logo {
+    margin: 0;
+}
+
+#header-right {
+    padding: 0;
+}
+
+#usf {
+    margin: 0;
+}
+
+#right-nav li {
+    color: #2f2f2f;
+}
+
+/* Search box fixes */
+#usf_submit {
+    margin-left: 2px;
+}
+
+#usf_query_container input {
+    padding: 1px 0 1px 3px;
+}
+
+/* ==|== nav menu =========================================================== */
+
+
+/* This is the top level menu */
+
+/* Add the gradient style to the background of the whole top level menu */
+#top-nav-wrapper {
+    width:100%;
+    height:auto;
+    -moz-border-radius:5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius:5px 5px 0 0;
+    clear:both;
+    float:left;
+}
+
+/* Multiple Gradient Styles for the Menu */
+#top-nav-wrapper {
+/* Light Gradient Style */
+    background:#234b6f;
+    background:-moz-linear-gradient(center top , rgba(255, 255, 255, 0.3) 0%, transparent 66%) #234b6f;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 255, 255, 0.3)),color-stop(66%,transparent)) #234b6f;
+    background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,transparent 66%) #234b6f;
+    background:-ms-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,transparent 66%) #234b6f;
+    background:linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,transparent 66%) #234b6f;
+    -moz-box-shadow: 0 1px #234b6f inset, 0 2px rgba(255, 255, 255, 0.3) inset, 0 -1px #234b6f inset;
+    -webkit-box-shadow: 0 1px #234b6f inset, 0 2px rgba(255, 255, 255, 0.3) inset, 0 -1px #234b6f inset;
+    box-shadow: 0 1px #234b6f inset, 0 2px rgba(255, 255, 255, 0.3) inset, 0 -1px #234b6f inset;
+    
+/* Dark Gradient Style */
+    background:#234b6f;
+    background:-moz-linear-gradient(center top , rgba(0, 0, 0, 0.4) 0%, transparent 66%) #234b6f;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.4)),color-stop(66%,transparent)) #234b6f;
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%,transparent 66%) #234b6f;
+    background:-ms-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%,transparent 66%) #234b6f;
+    background:linear-gradient(top, rgba(0, 0, 0, 0.4) 0%,transparent 66%) #234b6f;
+    -moz-box-shadow: 0 1px #234b6f inset, 0 2px rgba(0, 0, 0, 0.4) inset, 0 -1px #234b6f inset;
+    -webkit-box-shadow: 0 1px #234b6f inset, 0 2px rgba(0, 0, 0, 0.4) inset, 0 -1px #234b6f inset;
+    box-shadow: 0 1px #234b6f inset, 0 2px rgba(0, 0, 0, 0.4) inset, 0 -1px #234b6f inset;
+
+/* No Gradient Style */
+    background:#234b6f;
+    background:-moz-linear-gradient(center top , transparent 0%, transparent 66%) #234b6f;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent),color-stop(66%,transparent)) #234b6f;
+    background:-webkit-linear-gradient(top, transparent 0%,transparent 66%) #234b6f;
+    background:-ms-linear-gradient(top, transparent 0%,transparent 66%) #234b6f;
+    background:linear-gradient(top, transparent 0%,transparent 66%) #234b6f;
+    -moz-box-shadow: 0 1px #234b6f inset, 0 2px transparent inset, 0 -1px #234b6f inset;
+    -webkit-box-shadow: 0 1px #234b6f inset, 0 2px transparent inset, 0 -1px #234b6f inset;
+    box-shadow: 0 1px #234b6f inset, 0 2px transparent inset, 0 -1px #234b6f inset;
+}
+
+#main-nav {
+    font-weight:normal;
+    font-size:13px;
+    float: left;
+    height: 30px;
+}
+
+/* Round the corner on the first top level menu item */
+#main-nav li:first-child {
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+    border-radius: 5px 0 0 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+/* Adjust the link settings for the top level menu */
+#main-nav li a,
+#main-nav li a:link,
+#main-nav li a:visited,
+#main-nav li a:active{
+    color:#f4f6f8;
+    font-size:100%;
+    line-height:30px;
+    text-decoration:none;
+    display:block;
+    float:left;
+    padding:0 20px 0 20px;
+    text-align:left;
+    border-right:1px solid #2f2f2f;
+    text-shadow:0 1px 0 #2f2f2f;
+}
+
+/* Inject the Home icon on the first item */
+#main-nav li:first-child a,
+#main-nav li.selected:first-child a{
+    font-size:0;
+    text-indent:-999px;
+    width:auto;
+    background:url(../images/home_icon.png) no-repeat scroll center center transparent;
+}
+
+/* Change the font of the Home Icon to match the background color */
+#main-nav li:first-child a:hover,
+#main-nav li.selected:first-child a {
+    color:#4e7ba3;
+}
+
+/* Style the date item on the menu */
+#menu-date {
+    background: #2f2f2f;
+    color:#f4f6f8;
+    font-size:13px;
+    height:30px;
+    line-height:30px;
+    display:block;
+    float:right;
+    padding:0 20px 0 20px;
+    border-radius:0 5px 0 0;
+    border-left:1px solid #2f2f2f;
+}
+
+#menu-date {
+    /* Light Gradient Style */
+    background:-moz-linear-gradient(center top , rgba(255, 255, 255, 0.3) 0%, transparent 66%) repeat scroll 0 0 padding-box #2f2f2f;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 255, 255, 0.3)),color-stop(66%,transparent)) #2f2f2f;
+    background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,transparent 66%) #2f2f2f;
+    background:-ms-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,transparent 66%) #2f2f2f;
+    background:linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,transparent 66%) #2f2f2f;
+    -moz-box-shadow:0 1px #2f2f2f inset, 0 2px rgba(255, 255, 255, 0.3) inset, 0 -1px #2f2f2f inset;
+    -webkit-box-shadow:0 1px #2f2f2f inset, 0 2px rgba(255, 255, 255, 0.3) inset, 0 -1px #2f2f2f inset;
+    box-shadow:0 1px #2f2f2f inset, 0 2px rgba(255, 255, 255, 0.3) inset, 0 -1px #2f2f2f inset;
+    
+    /* Dark Gradient Style */
+    background:-moz-linear-gradient(center top , rgba(0, 0, 0, 0.4) 0%, transparent 66%) repeat scroll 0 0 padding-box #2f2f2f;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.4)),color-stop(66%,transparent)) #2f2f2f;
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%,transparent 66%) #2f2f2f;
+    background:-ms-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%,transparent 66%) #2f2f2f;
+    background:linear-gradient(top, rgba(0, 0, 0, 0.4) 0%,transparent 66%) #2f2f2f;
+    -moz-box-shadow:0 1px #2f2f2f inset, 0 2px rgba(0, 0, 0, 0.4) inset, 0 -1px #2f2f2f inset;
+    -webkit-box-shadow:0 1px #2f2f2f inset, 0 2px rgba(0, 0, 0, 0.4) inset, 0 -1px #2f2f2f inset;
+    box-shadow:0 1px #2f2f2f inset, 0 2px rgba(0, 0, 0, 0.4) inset, 0 -1px #2f2f2f inset;
+        
+    /* No Gradient Style */
+    background:-moz-linear-gradient(center top , transparent 0%, transparent 66%) repeat scroll 0 0 padding-box #2f2f2f;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent),color-stop(66%,transparent)) #2f2f2f;
+    background:-webkit-linear-gradient(top, transparent 0%,transparent 66%) #2f2f2f;
+    background:-ms-linear-gradient(top, transparent 0%,transparent 66%) #2f2f2f;
+    background:linear-gradient(top, transparent 0%,transparent 66%) #2f2f2f;
+    -moz-box-shadow:0 1px #2f2f2f inset, 0 2px transparent inset, 0 -1px #2f2f2f inset;
+    -webkit-box-shadow:0 1px #2f2f2f inset, 0 2px transparent inset, 0 -1px #2f2f2f inset;
+    box-shadow:0 1px #2f2f2f inset, 0 2px transparent inset, 0 -1px #2f2f2f inset;
+}
+
+/* style the top menu when hovering */
+#main-nav li.selected,
+#main-nav li:hover {
+    /* Light Gradient Style */
+    background: #4e7ba3;
+    background:-moz-linear-gradient(center top , rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%) repeat scroll 0 0 #4e7ba3;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 255, 255, 0.3)),color-stop(100%,rgba(0, 0, 0, 0.3))) #4e7ba3;
+    background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,rgba(0, 0, 0, 0.3) 100%) #437ba3;
+    background:-ms-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,rgba(0, 0, 0, 0.3) 100%) #437ba3;
+    background:linear-gradient(top, rgba(255, 255, 255, 0.3) 0%,rgba(0, 0, 0, 0.3) 100%) #437ba3;
+    -moz-box-shadow:0 1px #4e7ba3 inset, 0 2px rgba(255, 255, 255, 0.3) inset;
+    -webkit-box-shadow:0 1px #4e7ba3 inset, 0 2px rgba(255, 255, 255, 0.3) inset;
+    box-shadow:0 1px #4e7ba3 inset, 0 2px rgba(255, 255, 255, 0.3) inset;
+    
+    /* Dark Gradient Style */
+    background: #4e7ba3;
+    background:-moz-linear-gradient(center top , rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%) repeat scroll 0 0 #4e7ba3;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.4)),color-stop(100%,rgba(0, 0, 0, 0.3))) #4e7ba3;
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0.3) 100%) #437ba3;
+    background:-ms-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0.3) 100%) #437ba3;
+    background:linear-gradient(top, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0.3) 100%) #437ba3;
+    -moz-box-shadow:0 1px #4e7ba3 inset, 0 2px rgba(0, 0, 0, 0.4) inset;
+    -webkit-box-shadow:0 1px #4e7ba3 inset, 0 2px rgba(0, 0, 0, 0.4) inset;
+    box-shadow:0 1px #4e7ba3 inset, 0 2px rgba(0, 0, 0, 0.4) inset;
+    
+    /* No Gradient Style */
+    background: #4e7ba3;
+    background:-moz-linear-gradient(center top , transparent 0%, rgba(0, 0, 0, 0.3) 100%) repeat scroll 0 0 #4e7ba3;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent),color-stop(100%,rgba(0, 0, 0, 0.3))) #4e7ba3;
+    background:-webkit-linear-gradient(top, transparent 0%,rgba(0, 0, 0, 0.3) 100%) #437ba3;
+    background:-ms-linear-gradient(top, transparent 0%,rgba(0, 0, 0, 0.3) 100%) #437ba3;
+    background:linear-gradient(top, transparent 0%,rgba(0, 0, 0, 0.3) 100%) #437ba3;
+    -moz-box-shadow:0 1px #4e7ba3 inset, 0 2px transparent inset;
+    -webkit-box-shadow:0 1px #4e7ba3 inset, 0 2px transparent inset;
+    box-shadow:0 1px #4e7ba3 inset, 0 2px transparent inset;
+}
+
+/* Override the selected style from raw */
+#main-nav li.selected a, #main-nav li.selected a:link,
+#main-nav li.selected a:visited,
+#main-nav li.selected a:active {
+    font-weight: normal;
+    color: #f4f6f8;   
+}
+
+/* Sub nav, for the floating menu see dropdown.css */
+
+/* General style for sub-nav */
+#sub-nav {
+    clear: both;
+    font-size: 13px;
+    background: #f4f6f8;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+#sub-nav ul,
+#sub-nav li {
+    padding: 0;
+}
+
+/* setup the links for the subnav */
+#sub-nav li a,
+#sub-nav li a:link,
+#sub-nav li a:visited,
+#sub-nav li a:active {
+    padding:6px 10px;
+    border-right:1px solid #ddd;
+    text-decoration: none;
+}
+
+/* make the current link not look like a link */
+#sub-nav li.selected a,
+#sub-nav li.selected a:link,
+#sub-nav li.selected a:visited,
+#sub-nav li.selected a:active {
+    color: #2f2f2f;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* ==|== main content ======================================================= */
+
+/* Create the border */
+.message,
+#mainmiddle,
+.sideblock,
+.home-info-table,
+.group-info {
+    border: 1px solid #ddd;
+    background: #f4f6f8;
+    box-shadow:0 1px 0 #f4f6f8 inset;
+    -moz-box-shadow:0 1px 0 #f4f6f8 inset;
+    -webkit-box-shadow:0 1px 0 #f4f6f8 inset;
+}
+
+/* Create the Fancy Gradient */
+.message,
+#mainmiddle,
+.sideblock,
+.home-info-table,
+.group-info {
+    
+/* Dark Gradient */
+    background:linear-gradient(top, rgba(0, 0, 0, 0.08) 0%,transparent 15px) #f4f6f8;
+    background:-moz-linear-gradient(center top, rgba(0, 0, 0, 0.08) 0%, transparent 15px) #f4f6f8;
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%,transparent 15px) #f4f6f8;
+    background:-ms-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%,transparent 15px) #f4f6f8;
+
+/* Light Gradient */
+    background:linear-gradient(top, rgba(255, 255, 255, 0.2) 0%,transparent 15px) #f4f6f8;
+    background:-moz-linear-gradient(center top, rgba(255, 255, 255, 0.2) 0%, transparent 15px) #f4f6f8;
+    background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%,transparent 15px) #f4f6f8;
+    background:-ms-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%,transparent 15px) #f4f6f8;
+
+/* No Gradient */
+    background:linear-gradient(top, transparent 0%,transparent 15px) #f4f6f8;
+    background:-moz-linear-gradient(center top, transparent 0%, transparent 15px) #f4f6f8;
+    background:-webkit-linear-gradient(top, transparent 0%,transparent 15px) #f4f6f8;
+    background:-ms-linear-gradient(top, transparent 0%,transparent 15px) #f4f6f8;
+}
+
+/* the one exception to the border rule above */
+#mainmiddle {
+    border: 0 none!important;
+}
+
+div.sideblock {
+    margin-bottom: 4px;
+    padding: 6px 4px 4px 4px;
+    font-size:13px;
+}
+
+div.sideblock h3 {
+    font-size: 16px;
+}
+
+/* pad the main content */
+#main-column {
+    padding: 4px;
+}
+
+/* adjust main column size based on layout */
+.main-column {
+    width: auto;
+}
+
+.main-column-narrow {
+    width: 72%;
+}
+
+/* no need to pad left because main-column is already padded */
+#right-column {
+    padding: 4px 4px 4px 0;
+}
+
+/* Use the empty pseudo class to remove the margin when there are no messages */
+#messages:empty {
+    margin: 0;
+}
+
+/* fix button colors */
+
+ul.groupuserstatus li a,
+input.submit,
+input.cancel,
+button,
+.buttondk,
+input.button,
+input.select,
+input#files_filebrowser_edit_artefact,
+.btn {
+    color: #2f2f2f!important;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #f4f6f8;
+    border-color: #4e7ba3;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #f4f6f8;
+    -moz-box-shadow:0 1px #f4f6f8 inset, 0 2px transparent inset;
+    -webkit-box-shadow:0 1px #f4f6f8 inset, 0 2px transparent inset;
+    box-shadow:0 1px #f4f6f8 inset, 0 2px transparent inset;
+    background:-moz-linear-gradient(center top , rgba(255,255,255, 0.4) 0%, transparent 100%) repeat scroll 0 0 #f4f6f8;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255, 0.4)),color-stop(100%,transparent)) #f4f6f8;
+    background:-webkit-linear-gradient(top, rgba(255,255,255, 0.4) 0%,transparent 100%) #f4f6f8;
+    background:-ms-linear-gradient(top, rgba(255,255,255, 0.4) 0%,transparent 100%) #f4f6f8;
+    background:linear-gradient(top, rgba(255,255,255, 0.4) 0%,transparent 100%) #f4f6f8;
+}
+
+/* fix button hover */
+ul.groupuserstatus li a:hover,
+input.submit:hover,
+input.cancel:hover,
+button:hover,
+.buttondk:hover,
+input.button:hover,
+input.select:hover,
+input#files_filebrowser_edit_artefact:hover,
+.btn:hover {
+    border-color: #4e7ba3;
+    background:-moz-linear-gradient(center top , transparent 0%, rgba(0, 0, 0, 0.08) 100%) repeat scroll 0 0 #f4f6f8;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent),color-stop(100%,rgba(0, 0, 0, 0.08))) #f4f6f8;
+    background:-webkit-linear-gradient(top, transparent 0%,rgba(0, 0, 0, 0.08) 100%) #f4f6f8;
+    background:-ms-linear-gradient(top, transparent 0%,rgba(0, 0, 0, 0.08) 100%) #f4f6f8;
+    background:linear-gradient(top, transparent 0%,rgba(0, 0, 0, 0.08) 100%) #f4f6f8;
+}
+
+/* fix button active */
+ul.groupuserstatus li a:active,
+input.submit:active,
+input.cancel:active,
+button:active,
+.buttondk:active,
+input.button:active,
+input.select:active,
+input#files_filebrowser_edit_artefact:active,
+.btn:active {
+    border-color: #4e7ba3;
+    background:-moz-linear-gradient(center top , rgba(0, 0, 0, 0.08) 0%, transparent 100%) repeat scroll 0 0 #f4f6f8;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.08)),color-stop(100%,transparent)) #f4f6f8;
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%,transparent 100%) #f4f6f8;
+    background:-ms-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%,transparent 100%) #f4f6f8;
+    background:linear-gradient(top, rgba(0, 0, 0, 0.08) 0%,transparent 100%) #f4f6f8;
+}
+
+/* tables */
+.r1,
+.r1 td,
+.d1 {
+    background-color: rgba(255,255,255,0.10)!important;
+}
+
+.r1,
+.d1 {
+    background-color: rgba(255,255,255,0.20)!important;
+}
+
+.r1 .r1,
+.r1 .r1 td{
+    background-color: transparent!important;
+}
+
+.r0,
+.r0 td,
+.d0  {
+    background-color: rgba(0, 0, 0, 0.02)!important;
+}
+
+.r0,
+.d0 {
+    background-color: rgba(0, 0, 0, 0.04)!important;
+}
+
+.r1 .r1,
+.r1 .r1 td {
+    background-color: transparent!important;
+}
+
+.d1,
+.d0 {
+    background-color: transparent!important;
+}
+
+.twocolumn td {
+    border-right: 2px solid #f4f6f8;
+    border-top: 2px solid #f4f6f8;
+}
+
+.r1, .r1 td, .d1 {
+    border-bottom: 0 none!important;
+}
+
+.r0, .r0 td, .d0 {
+    border-bottom: 0 none!important;
+}
+
+/* ==|== tabbed forms ======================================================= */
+
+
+/* Don't need to wrap the whole page */
+.subpage {
+    border: 0 none;
+    border-top: 1px solid #ddd;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-raidus: 0;
+    margin-top: 16px;
+    padding: 4px;
+}
+
+/* 4 pixels from the edge, 4 pixels from the border */
+legend {
+    padding: 0 4px;
+    margin: 0 4px;
+}
+
+/* make sure the tabs are on top of the subpage */
+ul.in-page-tabs,
+ul.edit-view-tabs {
+    font-weight: normal;
+    z-index: 1;
+    padding: 0 8px;
+}
+
+ul.in-page-tabs li a,
+ul.in-page-tabs li a:link,
+ul.in-page-tabs li a:visited,
+ul.in-page-tabs li a:active,
+ul.edit-view-tabs li a,
+ul.edit-view-tabs li a:link,
+ul.edit-view-tabs li a:visited,
+ul.edit-view-tabs li a:active{
+    background: transparent;
+}
+
+/* make the links look like tabs */
+ul.in-page-tabs li a,
+ul.edit-view-tabs li a {
+    border: 1px solid #ddd;
+    margin-bottom: -1px;
+}
+
+/* make the active tab look active and not like a link */
+ul.in-page-tabs li a.current-tab,
+ul.in-page-tabs li a.current-tab:link,
+ul.in-page-tabs li a.current-tab:visited,
+ul.in-page-tabs li a.current-tab:active,
+ul.in-page-tabs li a.current-tab:hover,
+ul.edit-view-tabs li a.current-tab,
+ul.in-page-tabs li a.current-tab:link,
+ul.edit-view-tabs li a.current-tab:visited,
+ul.edit-view-tabs li a.current-tab:active,
+ul.edit-view-tabs li a.current-tab:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #f4f6f8;
+    background: transparent;
+    color: #2f2f2f;
+}
+
+/* ==|== footer area ======================================================== */
+
+#footer-wrap {
+    border: 0 none;
+}
+
+#footernav {
+    color: #2f2f2f;
+}
+
+#powered-by,
+#version {
+    margin: 5px 0;
+}
+
+
+/* ==|== files manager ====================================================== */
+
+#upload,
+.fileupload,
+#createfolder {
+    background-color: transparent!important;
+    border: 1px solid #ddd!important;
+}
+
+tr.editrow,
+tr.editrow td {
+    background-color: transparent!important;
+    border-bottom: 0 none!important;
+}
+
+#editpost_filebrowser_open_upload_browse_container {
+    border: 0 none;
+}
+
+#editpost_filebrowser_upload_browse,
+.main-column thead th,
+tr.editrow {
+    border-bottom: 1px solid #ddd;
+}
+
+.r0,
+.r0 td,
+.d0,
+.r1,
+.r1 td,
+.d1
+tr.folder td {
+    border-bottom: 0 none!important;
+}
+
+tr.folder td {
+    border-bottom: 1px solid #f4f6f8!important;
+}
+
+tr.folder,
+tr.parentfolder {
+    background-color: transparent!important;
+}
+
+tr.folder td,
+tr.parentfolder td {
+    background: #ddd!important;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.05) 100%) transparent!important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(50%,rgba(255,255,255,0.3)), color-stop(51%,rgba(0,0,0,0.05)), color-stop(100%,rgba(0,0,0,0.05))) transparent!important;
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 50%,rgba(0,0,0,0.05) 51%,rgba(0,0,0,0.05) 100%) transparent!important;
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 50%,rgba(0,0,0,0.05) 51%,rgba(0,0,0,0.05) 100%) transparent!important;
+    background: linear-gradient(top,  #f4f6f8 0%,#f4f6f8 50%,rgba(0,0,0,0.05) 51%,rgba(0,0,0,0.05) 100%) transparent!important;
+}
+
+table.attachments {
+    border: 1px solid #ddd;
+}
+
+.attachments tbody th {
+    color: #2f2f2f!important;
+    background-color: transparent!important;
+}
+
+td.filedate {
+    color: #2f2f2f;
+}
+
+/* --|== Profiles =========================================================== */
+
+#postlist th,
+#userview {
+    border-bottom: 1px solid #ddd!important;
+}
+
+.morelinkwrap {
+    background: transparent;
+}
+
+.wallpost {
+    border-bottom: 0 none;
+}
+
+/* make wall posts look like table rows */
+.wallpost:nth-child(odd) {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.wallpost:nth-child(even) {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.blockinstance-header h4 {
+    border-bottom: 2px solid #ddd;
+}
+
+/* Important is needed because raw stacks ids */
+#editaccess_collections_container,
+#editaccess_accesslist_container, 
+#editaccess_more_container {
+    background: transparent!important; /* Important is needed because raw stacks ids */
+    border: 1px solid #ddd!important;
+}
+
+#editaccess_collections_container .calendar,
+#editaccess_accesslist_container .calendar, 
+#editaccess_more_container .calendar {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+    
+#viewacl-advanced {
+    width: 350px;
+}
+
+/* --|== Groups ============================================================= */
+
+.submissionform {
+    background: transparent;
+}
+
+.memberswrap {
+    border: 0 none;
+    padding: 0;
+}
+
+.memberssearch {
+    background: transparent;
+    border-right: 0 none;
+    padding: 0;
+}
+
+#results {
+    margin-top: 10px;
+}
+
+.grouppageswrap {
+    border: 0 none;
+}
+
+/* ==|== popups ============================================================= */
+
+.contextualHelp {
+    -moz-box-shadow: 1px 2px 2px #ddd;
+    -webkit-box-shadow: 1px 2px 2px #ddd;
+    box-shadow: 1px 2px 2px #ddd;
+    color: #2f2f2f;
+    background-color: #f4f6f8;
+    border: 1px solid #2f2f2f;
+}
+
+/* ==|== micro layout ======================================================= */
+
+#containerX #top-wrapper {
+    background: transparent;
+}
+
+#micro #main-wrapper {
+    background: #f4f6f8;
+}
+
+#containerX .main-column {
+    padding: 4px;
+}
+
+#containerX #postlist th,
+#containerX #userview {
+    border-bottom: 0 none!important;
+}
+
+#containerX #messages {
+    padding: 0;
+}
+
+.viewheadertop #mainnav-container {
+    color: #2f2f2f;
+}
+
+.viewheader .title {
+    color: #2f2f2f;
+    float: left;
+}
+
+/* ==|== overrides ========================================================== */
+
+
+.home-info-table {
+    margin: 0;
+}
+
+#accountprefs table h3 {
+    border-bottom: 1px solid #ddd;
+}
+
+.description,
+.unvalidated,
+.postdetails {
+    color: #2f2f2f;
+}
