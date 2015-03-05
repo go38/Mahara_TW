@@ -1,27 +1,11 @@
 <?php
 /**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package    mahara
  * @subpackage lang
  * @author     Catalyst IT Ltd
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later
+ * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  *
  */
 
@@ -44,16 +28,16 @@ $string['homedefaultcontent'] = '<h1>Welcome</h1>
 
 <p>For more information you can read <a href="about.php">About</a> <strong>[<i>please ensure you also edit this page</i>]</strong> or alternatively please feel free to <a href="contact.php">contact us</a>.</p>
 
-<p><i>You can edit this text via "Edit site pages" in "Configure site" in "Site administration"</i></p>';
+<p><i>You can edit this text via %s</i></p>';
 $string['loggedouthomedefaultcontent'] = '<h1>Welcome</h1>
 
 <p>[<i>Name of your installation here</i>] is a fully featured electronic portfolio system with social networking features to create online learning communities.</p>
 
 <p>For more information you can read <a href="about.php">About</a> [<i>please ensure you also edit this page</i>] or alternatively please feel free to <a href="contact.php">contact us</a>.</p>
 
-<p><i>You can edit this text via "Edit site pages" in "Configure site" in "Site administration"</i></p>';
+<p><i>You can edit this text via %s</i></p>';
 $string['privacydefaultcontent'] = '<h1>Privacy statement</h1>
-    
+
 <h2>Introduction</h2>
 
 <p>[<i>This is a default privacy statement for your legal department to edit</i>].</p>
@@ -126,3 +110,24 @@ $string['termsandconditionsdefaultcontent'] = '<h1>Terms and conditions</h1>
 <p>We may occasionally make minor adjustments to our terms and condition to reflect changes to the system and in response to user feedback. As such we suggest you check the terms and conditions each time you visit this site. We will however notify users of any major changes to the terms and conditions via the [<i>name of site</i>] homepage.</p>';
 
 $string['uploadcopyrightdefaultcontent'] = 'Yes: The file I am attempting to upload is my own or I have express permission to reproduce and/or distribute this item. My use of this file does not breach any local copyright legislation. This file also adheres to the terms and conditions outlined on this site.';
+
+// Note: these license names (long and short) are taken from the SPDX License
+// List "Full name" and "Identifier" columns. See: http://spdx.org/licenses
+$string['licensedisplaynamebysa']   = 'Creative Commons Attribution Share Alike 4.0';
+$string['licensedisplaynameby']     = 'Creative Commons Attribution 4.0';
+$string['licensedisplaynamebynd']   = 'Creative Commons Attribution No Derivatives 4.0';
+$string['licensedisplaynamebyncsa'] = 'Creative Commons Attribution Non Commercial Share Alike 4.0';
+$string['licensedisplaynamebync']   = 'Creative Commons Attribution Non Commercial 4.0';
+$string['licensedisplaynamebyncnd'] = 'Creative Commons Attribution Non Commercial No Derivatives 4.0';
+$string['licensedisplaynamegfdl']   = 'GNU Free Documentation License v1.3';
+
+$string['licenseshortnamebysa']   = 'CC-BY-SA-4.0';
+$string['licenseshortnameby']     = 'CC-BY-4.0';
+$string['licenseshortnamebynd']   = 'CC-BY-ND-4.0';
+$string['licenseshortnamebyncsa'] = 'CC-BY-NC-SA-4.0';
+$string['licenseshortnamebync']   = 'CC-BY-NC-4.0';
+$string['licenseshortnamebyncnd'] = 'CC-BY-NC-ND-4.0';
+$string['licenseshortnamegfdl']   = 'GFDL-1.3';
+
+$string['staticpageconfigdefault'] = '"Static pages" in "Configure site" in "Administration"';
+$string['staticpageconfiginstitution'] = '"Static pages" in "Institutions" in "Administration"';

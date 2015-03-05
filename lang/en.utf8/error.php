@@ -1,27 +1,11 @@
 <?php
 /**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package    mahara
  * @subpackage lang
  * @author     Catalyst IT Ltd
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later
+ * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  *
  */
 
@@ -31,8 +15,8 @@ defined('INTERNAL') || die();
 $string['phpversion'] = 'Mahara will not run on PHP < %s. Please upgrade your PHP version or move Mahara to a different host.';
 $string['jsonextensionnotloaded'] = 'Your server configuration does not include the JSON extension. Mahara requires this in order to send some data to and from the browser. Please make sure that it is loaded in php.ini or install it if it is not installed.';
 $string['pgsqldbextensionnotloaded'] = 'Your server configuration does not include the pgsql extension. Mahara requires this in order to store data in a relational database. Please make sure that it is loaded in php.ini or install it if it is not installed.';
-$string['mysqldbextensionnotloaded'] = 'Your server configuration does not include the mysql extension. Mahara requires this in order to store data in a relational database. Please make sure that it is loaded in php.ini or install it if it is not installed.';
-$string['unknowndbtype'] = 'Your server configuration references an unknown database type. Valid values are "postgres8" and "mysql5". Please change the database type setting in config.php.';
+$string['mysqldbextensionnotloaded'] = 'Your server configuration does not include the mysqli or mysql extension. Mahara requires this in order to store data in a relational database. Please make sure that it is loaded in php.ini or install it if it is not installed.';
+$string['unknowndbtype'] = 'Your server configuration references an unknown database type. Valid values are "postgres" and "mysql". Please change the database type setting in config.php.';
 $string['domextensionnotloaded'] = 'Your server configuration does not include the dom extension. Mahara requires this in order to parse XML data from a variety of sources.';
 $string['xmlextensionnotloaded'] = 'Your server configuration does not include the %s extension. Mahara requires this in order to parse XML data from a variety of sources. Please make sure that it is loaded in php.ini or install it if it is not installed.';
 $string['gdextensionnotloaded'] = 'Your server configuration does not include the gd extension. Mahara requires this in order to perform resizes and other operations on uploaded images. Please make sure that it is loaded in php.ini or install it if it is not installed.';
@@ -56,6 +40,7 @@ $string['apcstatoff'] = 'Your server appears to be running APC with apc.stat=0. 
 If you are on shared hosting, it is likely that there is little you can do to get apc.stat turned on other than ask your hosting provider. Perhaps you could consider moving to a different host.';
 $string['datarootinsidedocroot'] = 'You have set up your data root to be inside your document root. This is a large security problem as then anyone can directly request session data (in order to hijack other people\'s sessions) or files that they are not allowed to access that other people have uploaded. Please configure the data root to be outside of the document root.';
 $string['datarootnotwritable'] = 'Your defined data root directory, %s, is not writable. This means that neither session data, user files nor anything else that needs to be uploaded can be saved on your server. Please make the directory if it does not exist or give ownership of the directory to the web server user if it does.';
+$string['sessionpathnotwritable'] = 'Your session data directory, %s, is not writable. Please create the directory if it does not exist or give ownership of the directory to the web server user if it does.';
 $string['wwwrootnothttps'] = 'Your defined wwwroot, %s, is not HTTPS. However, other settings (such as sslproxy) for your installation require that your wwwroot is a HTTPS address.
 
 Please update your wwwroot setting to be a HTTPS address or fix the incorrect setting.';
@@ -109,6 +94,9 @@ $string['viewnotfoundexceptionmessage'] = 'You tried to access a page that does 
 $string['viewnotfound'] = 'Page with id %s not found.';
 $string['viewnotfoundbyname'] = 'Page %s by %s not found.';
 $string['youcannotviewthisusersprofile'] = 'You cannot view this user\'s profile.';
+$string['invalidlayoutselection'] = 'You tried to select a layout that doesn\'t exist.';
+$string['invalidnumrows'] = 'You have tried to create a layout with more than the allowed maximum number of rows. (This should not be possible; please notify your site\'s administrator.)';
+$string['previewimagegenerationfailed'] = 'Sorry, there was a problem generating the preview image.';
 
 $string['artefactnotfoundmaybedeleted'] = "Artefact with id %s not found (maybe it has been deleted already?)";
 $string['artefactnotfound'] = 'Artefact with id %s not found';
@@ -116,13 +104,14 @@ $string['artefactnotinview'] = 'Artefact %s not in page %s';
 $string['artefactonlyviewableinview'] = 'Artefacts of this type are only viewable within a page.';
 $string['notartefactowner'] = 'You do not own this artefact.';
 
-$string['blockinstancednotfound'] = 'Block instance with id %s not found.';
+$string['blockinstancenotfound'] = 'Block instance with id %s not found.';
 $string['interactioninstancenotfound'] = 'Activity instance with id %s not found.';
 
 $string['invalidviewaction'] = 'Invalid page control action: %s';
 
 $string['missingparamblocktype'] = 'Try selecting a block type to add first.';
 $string['missingparamcolumn'] = 'Missing column specification';
+$string['missingparamrow'] = 'Missing row specification';
 $string['missingparamorder'] = 'Missing order specification';
 $string['missingparamid'] = 'Missing id';
 
@@ -132,7 +121,7 @@ $string['timezoneidentifierunusable'] = 'PHP on your website host does not retur
 $string['postmaxlessthanuploadmax'] = 'Your PHP post_max_size setting (%s) is smaller than your upload_max_filesize setting (%s). Uploads larger than %s will fail without displaying an error. Usually, post_max_size should be much larger than upload_max_filesize.';
 $string['smallpostmaxsize'] = 'Your PHP post_max_size setting (%s) is very small. Uploads larger than %s will fail without displaying an error.';
 $string['notenoughsessionentropy'] = 'Your PHP session.entropy_length setting is too small. Set it to at least 16 in your php.ini to ensure that generated session IDs are random and unpredictable enough.';
-
+$string['switchtomysqli'] = 'The <strong>mysqli</strong> PHP extension is not installed on your server. Thus, Mahara is falling back to the deprecated original <strong>mysql</strong> PHP extension. We recommend installing <a href="http://php.net/manual/en/book.mysqli.php">mysqli</a>.';
 $string['noreplyaddressmissingorinvalid'] = 'The noreply address setting is either empty or has an invalid email address. Please check the configuration in the <a href="%s">site options in the email settings</a>.';
 $string['openbasedirenabled'] = 'Your server has the php open_basedir restriction enabled.';
 $string['openbasedirpaths'] = 'Mahara can only open files within the following path(s): %s.';

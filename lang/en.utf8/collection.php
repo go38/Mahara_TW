@@ -1,28 +1,12 @@
 <?php
 
 /**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package    mahara
  * @subpackage lang
  * @author     Catalyst IT Ltd
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later
+ * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  *
  */
 
@@ -74,6 +58,9 @@ $string['deletespecifiedcollection'] = 'Delete collection \'%s\'';
 $string['deletingcollection'] = 'Deleting collection';
 $string['deleteview'] = 'Remove page from collection';
 $string['description'] = 'Collection description';
+$string['collectiondragupdate1'] = 'Drag page names from the \'Add pages to collection\' box or tick the check boxes and click the \'Add pages\' button to move pages to \'Pages already in collection\'.<br>
+You can drag page names or use the arrow buttons to re-order pages in the \'Pages already in collection\' area.';
+$string['viewsincollection'] = 'Pages already in collection';
 $string['editcollection'] = 'Edit collection';
 $string['editingcollection'] = 'Editing collection';
 $string['edittitleanddesc'] = 'Edit title and description';
@@ -83,7 +70,9 @@ $string['editaccess'] = 'Edit collection access';
 $string['emptycollectionnoeditaccess'] = 'You cannot edit access to empty collections. Add some pages first.';
 $string['emptycollection'] = 'Empty collection';
 $string['manageviews'] = 'Manage pages';
+$string['manageviewsspecific'] = 'Manage pages in "%s"';
 $string['name'] = 'Collection name';
+$string['needtoselectaview'] = 'You need to select a page to add to the collection.';
 $string['newcollection'] = 'New collection';
 $string['nocollections'] = 'No collections yet.';
 $string['nocollectionsaddone'] = 'No collections yet. %sAdd one%s.';
@@ -98,13 +87,20 @@ $string['savecollection'] = 'Save collection';
 $string['update'] = 'Update';
 $string['usecollectionname'] = 'Use collection name?';
 $string['usecollectionnamedesc'] = 'If you wish to use the collection name instead of the block title, leave this checked.';
-$string['viewaddedtocollection'] = 'Page added to collection. Collection updated to include access from new page.';
+$string['viewsaddedtocollection1'] = array(
+    '%s page added to collection.',
+    '%s pages added to collection.',
+);
+$string['viewsaddedtocollection1different'] = array(
+    '%s page added to collection. The shared access has changed for all pages in the collection.',
+    '%s pages added to collection. The shared access has changed for all pages in the collection.',
+);
+$string['viewsaddedaccesschanged'] = 'Access permissions have changed for the following pages:';
 $string['viewcollection'] = 'View collection details';
 $string['viewcount'] = 'Pages';
 $string['viewremovedsuccessfully'] = 'Page removed successfully.';
 $string['viewnavigation'] = 'Page navigation bar';
 $string['viewnavigationdesc'] = 'Add a horizontal navigation bar to every page in this collection by default.';
-$string['viewsaddedtocollection'] = 'Pages added to collection. Collection updated to include access from new pages.';
 $string['viewstobeadded'] = 'Pages to be added';
 $string['viewconfirmremove'] = 'Are you sure you wish to remove this page from the collection?';
 $string['collectioncopywouldexceedquota'] = 'Copying this collection would exceed your file quota.';
@@ -112,3 +108,6 @@ $string['copiedpagesblocksandartefactsfromtemplate'] = 'Copied %d pages, %d bloc
 $string['copiedblogpoststonewjournal'] = 'Copied journal posts have been put into a new separate journal.';
 $string['by'] = 'by';
 $string['copycollection'] = 'Copy collection';
+$string['youhaveonecollection'] = 'You have 1 collection.';
+$string['youhavecollections']   = 'You have %s collections.';
+$string['collectionssharedtogroup'] = 'Collections shared with this group';

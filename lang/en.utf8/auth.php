@@ -1,27 +1,11 @@
 <?php
 /**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package    mahara
  * @subpackage lang
  * @author     Catalyst IT Ltd
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later
+ * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  *
  */
 
@@ -30,9 +14,8 @@ defined('INTERNAL') || die();
 // IMAP
 $string['host'] = 'Hostname or address';
 $string['wwwroot'] = 'WWW root';
-
-$string['port'] = 'Port number'; 
 $string['protocol'] = 'Protocol';
+$string['port'] = 'Port';
 $string['changepasswordurl'] = 'Password-change URL';
 $string['cannotremove']  = "We cannot remove this authentication plugin, as it is the only \nplugin that exists for this institution.";
 $string['cannotremoveinuse']  = "We cannot remove this authentication plugin, as it is being used by some users.\nYou must update their records before you can remove this plugin.";
@@ -79,6 +62,8 @@ $string['xmlrpccouldnotlogyouindetail1'] = 'Sorry, we could not log you into %s 
 
 $string['requiredfields'] = 'Required profile fields';
 $string['requiredfieldsset'] = 'Required profile fields set';
+$string['primaryemaildescription'] = 'The primary email address. You will receive an email containing a clickable link – follow this to validate the address and log in to the system';
+$string['validationprimaryemailsent'] = 'A validation email has been sent. Please click the link inside this to validate the address';
 $string['noauthpluginconfigoptions'] = 'There are no configuration options associated with this plugin.';
 
 $string['hostwwwrootinuse'] = 'WWW root already in use by another institution (%s).';

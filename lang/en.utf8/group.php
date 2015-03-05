@@ -1,27 +1,11 @@
 <?php
 /**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package    mahara
  * @subpackage lang
  * @author     Catalyst IT Ltd
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later
+ * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  *
  */
 
@@ -107,7 +91,11 @@ $string['hasbeeninvitedtojoin'] = 'has been invited to join this group';
 $string['groupinvitesfrom'] = 'Invited to join:';
 $string['requestedmembershipin'] = 'Requested membership in:';
 $string['viewnotify'] = 'Shared page notifications';
-$string['viewnotifydescription'] = 'If checked, a notification will be sent to every group member whenever a member shares one of their pages with the group. Enabling this setting in very large groups can produce a lot of notifications.';
+$string['viewnotifydescription2'] = 'Select which group members should receive a notification when a new group page is created and when a group member shares one of their pages with the group. The group member sharing the page will not receive this notification. For very large groups it would be best to limit this to non ordinary members as it can produce a lot of notifications.';
+$string['feedbacknotify'] = 'Feedback notifications';
+$string['feedbacknotifydescription1'] = 'Select which group members should receive a notification when feedback is placed on a group page and artefacts.';
+$string['allowsendnow'] = 'Send forum posts immediately';
+$string['allowsendnowdescription'] = 'If checked, any group member will be able to choose to send forum posts immediately. If unchecked, only group administrators, tutors and moderators can do so.';
 $string['hiddengroup'] = 'Hide group';
 $string['hiddengroupdescription'] = 'Do not list this group on the "Find groups" page.';
 $string['hidemembers'] = 'Hide membership';
@@ -163,7 +151,9 @@ $string['viewreleasedmessage'] = 'Your page "%s" has been released from %s by %s
 $string['collectionreleasedsubject'] = 'Your collection "%s" has been released from %s by %s';
 $string['collectionreleasedmessage'] = 'Your collection "%s" has been released from %s by %s.';
 $string['viewreleasedsuccess'] = 'Page was released successfully';
+$string['viewreleasedpending'] = 'Page will be released after archiving';
 $string['collectionreleasedsuccess'] = 'Collection was released successfully';
+$string['collectionreleasedpending'] = 'Collection will be released after archiving';
 $string['leavegroup'] = 'Leave this group';
 $string['joingroup'] = 'Join this group';
 $string['requestjoingroup'] = 'Request to join this group';
@@ -196,6 +186,7 @@ $string['groupsimin']  = 'Groups I\'m in';
 $string['groupsiown']  = 'Groups I own';
 $string['groupsiminvitedto'] = 'Groups I\'m invited to';
 $string['groupsiwanttojoin'] = 'Groups I want to join';
+$string['groupsicanjoin'] = 'Groups I can join';
 $string['requestedtojoin'] = 'You have requested to join this group';
 $string['groupnotfound'] = 'Group with id %s not found';
 $string['groupnotfoundname'] = 'Group %s not found';
@@ -254,11 +245,11 @@ $string['addedtofriendslistmessage'] = '%s added you as a friend. This means tha
     . ' Click on the link below to see their profile page.';
 
 $string['requestedfriendlistsubject'] = 'New friend request';
-$string['requestedfriendlistmessage'] = '%s has requested that you add them as a friend.  '
-    .' You can either do this from the link below or from your friends list page';
+$string['requestedfriendlistinboxmessage'] = '%s has requested that you add them as a friend.  '
+    .' You can either do this by clicking the following link or by going to your friends list page.';
 
-$string['requestedfriendlistmessagereason'] = '%s has requested that you add them as a friend.'
-    . ' You can either do this from the link below or from your friends list page.'
+$string['requestedfriendlistmessageexplanation'] = '%s has requested that you add them as a friend.'
+    . ' You can either do this by clicking the following link or by going to your friends list page'
     . ' Their reason was:
     ';
 
@@ -295,6 +286,7 @@ $string['whymakemeyourfriend'] = 'This is why you should make me your friend:';
 $string['approverequest'] = 'Approve request';
 $string['denyrequest']    = 'Deny request';
 $string['pending']        = 'pending';
+$string['pendingsince']   = 'pending since %s';
 $string['trysearchingforfriends'] = 'Try %ssearching for new friends%s to grow your network.';
 $string['nobodyawaitsfriendapproval'] = 'Nobody is awaiting your approval to become your friend.';
 $string['sendfriendrequest'] = 'Send friend request';
@@ -358,6 +350,7 @@ $string['title'] = 'Title';
 $string['Role'] = 'Role';
 $string['changerole'] = 'Change role';
 $string['changeroleofuseringroup'] = 'Change role of %s in %s';
+$string['changerolepermissions'] = 'Change %s role for %s';
 $string['currentrole'] = 'Current role';
 $string['changerolefromto'] = 'Change role from %s to';
 $string['rolechanged'] = 'Role changed';
@@ -377,6 +370,8 @@ $string['allowssubmissions'] = 'Allows submissions';
 $string['allowsubmissions'] = 'Allow submissions';
 $string['allowssubmissionsdescription1'] = "Members can submit pages to the group that are then locked. These pages cannot be edited until they are released by a group tutor or administrator.";
 $string['allowssubmissionsdescription'] = 'Members can submit pages to the group.';
+$string['allowsarchives'] = 'Allow archiving of submissions';
+$string['allowsarchivesdescription'] = 'Pages / collections are archived as zipped Leap2A files during the submission release process.';
 
 // Group reports
 $string['report'] = 'Report';

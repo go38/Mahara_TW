@@ -1,27 +1,11 @@
 <?php
 /**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package    mahara
  * @subpackage lang
  * @author     Catalyst IT Ltd
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later
+ * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  *
  */
 
@@ -43,19 +27,25 @@ $string['userviewurltaken']       = 'This URL is already taken. Please choose an
 $string['description']            = 'Page description';
 $string['startdate']              = 'Access start date/time';
 $string['stopdate']               = 'Access end date/time';
-$string['accessdates']            = 'Access date/time';
+$string['stopdatecannotbeinpast'] = 'Stop date cannot be in the past';
+$string['startdatemustbebeforestopdate'] = 'Start date must be before stop date';
 $string['newstopdatecannotbeinpast'] = 'The end date for \'%s\' access cannot be in the past.';
 $string['newstartdatemustbebeforestopdate'] = 'The start date for \'%s\' access must be before the end date.';
 $string['unrecogniseddateformat'] = 'Unrecognised date format';
 $string['allowcommentsonview']    = 'If checked, users will be allowed to leave comments.';
 $string['ownerformat']            = 'Name display format';
 $string['ownerformatdescription'] = 'How do you want people who look at your page to see your name?';
+$string['anonymise']              = 'Anonymise';
+$string['anonymisedescription']   = 'Hide your name as the author of the page from other users. Administrators will still be able to see your name if they so desire.';
 $string['Locked']                 = 'Locked';
 $string['lockedgroupviewdesc']    = 'If you lock this page, only group administrators will be able to edit it.';
 $string['profileviewtitle']       = 'Profile page';
 $string['dashboardviewtitle']     = 'Dashboard page';
 $string['grouphomepageviewtitle'] = 'Group homepage';
 $string['viewname']               = 'Page name';
+$string['templatedashboard']      = 'Dashboard template';
+$string['templategrouphomepage']  = 'Group homepage template';
+$string['templateprofile']        = 'Profile template';
 
 // my views
 $string['artefacts'] = 'Artefacts';
@@ -74,13 +64,16 @@ $string['accessbetweendates2'] = 'Nobody else can see this page before %s or aft
 $string['artefactsinthisview'] = 'Artefacts in this page';
 $string['whocanseethisview'] = 'Who can see this page';
 $string['view'] = 'page';
+$string['vieworcollection'] = 'page or collection';
 $string['views'] = 'pages';
+$string['viewsandcollections'] = 'pages and collections';
 $string['View'] = 'Page';
 $string['Views'] = 'Pages';
 $string['viewsubmittedtogroup'] = 'This page has been submitted to <a href="%s">%s</a>.';
 $string['viewsubmittedtogroupon'] = 'This page was submitted to <a href="%s">%s</a> on %s.';
 $string['collectionsubmittedtogroup'] = 'This collection has been submitted to <a href="%s">%s</a>.';
 $string['collectionsubmittedtogroupon'] = 'This collection was submitted to <a href="%s">%s</a> on %s.';
+$string['submittedpendingrelease'] = 'Pending release after archiving.';
 $string['nobodycanseethisview2'] = 'Only you can see this page.';
 $string['noviews'] = 'No pages.';
 $string['nviews'] = array(
@@ -102,7 +95,7 @@ $string['listedinpages'] = 'Listed in pages';
 
 // access levels
 $string['public'] = 'Public';
-$string['loggedin'] = 'Logged-in users';
+$string['registeredusers'] = 'Registered users';
 $string['friends'] = 'Friends';
 $string['groups'] = 'Groups';
 $string['users'] = 'Users';
@@ -115,11 +108,11 @@ $string['newsecreturl'] = 'New secret URL';
 $string['reallydeletesecreturl'] = 'Are you sure you want to delete this URL?';
 $string['secreturldeleted'] = 'Your secret URL was deleted.';
 $string['secreturlupdated'] = 'Secret URL updated';
-$string['generatesecreturl'] = 'Generate a new secret URL for %s';
+$string['generatesecreturl'] = 'Generate a new secret URL for "%s".';
 $string['secreturls'] = 'Secret URLs';
 
 $string['publicaccessnotallowed'] = "Your institution or site administrator has disabled public pages and secret URLs. Any secret URLs you see listed here are currently inactive.";
-
+$string['publicaccessnotallowedforprobation'] = "Sorry, newly registered users aren't allowed to create secret URLs.";
 // view user
 $string['inviteusertojoingroup'] = 'Invite this user to join a group';
 $string['addusertogroup'] = 'Add this user to a group';
@@ -130,22 +123,21 @@ $string['attachment'] = 'Attachment';
 $string['removedfromwatchlist'] = 'This page has been removed from your watchlist.';
 $string['addtowatchlist'] = 'Add page to watchlist';
 $string['removefromwatchlist'] = 'Remove page from watchlist';
+$string['addtowatchlistartefact'] = 'Add page "%s" to watchlist';
+$string['removefromwatchlistartefact'] = 'Remove page "%s" from watchlist';
 $string['alreadyinwatchlist'] = 'This page is already on your watchlist.';
 $string['attachedfileaddedtofolder'] = "The attached file %s has been added to your '%s' folder.";
-$string['complaint'] = 'Complaint';
 $string['date'] = 'Date';
-$string['notifyadministrator'] = 'Notify administrator';
-$string['notifyadministratorconfirm'] = 'Are you sure you wish to report this page as containing objectionable material?';
 $string['print'] = 'Print';
-$string['reportobjectionablematerial'] = 'Report objectionable material';
-$string['reportsent'] = 'Your report has been sent.';
 $string['viewobjectionableunmark'] = 'This page, or something within it, has been reported as containing objectionable content. If this is no longer the case, you can click the button to remove this notice and notify the other administrators.';
-$string['notobjectionable'] = 'Not objectionable';
 $string['viewunobjectionablesubject'] = 'Page %s was marked as not objectionable by %s.';
 $string['viewunobjectionablebody'] = '%s has looked at %s by %s and marked it as no longer containing objectionable material.';
 $string['updatewatchlistfailed'] = 'Update of watchlist failed';
 $string['watchlistupdated'] = 'Your watchlist has been updated.';
-$string['viewvisitcount'] = '%d page visit(s) from %s to %s';
+$string['viewvisitcount'] = array(
+    0 => '%d page visit from %s to %s',
+    1 => '%d page visits from %s to %s',
+);
 $string['profilenotshared'] = 'Full access to this user profile is restricted.';
 
 $string['friend'] = 'Friend';
@@ -154,8 +146,10 @@ $string['profileicon'] = 'Profile picture';
 // general views stuff
 $string['Added'] = 'Added';
 $string['share'] = 'Share';
+$string['sharedbyme'] = 'Shared by me';
 $string['sharewith'] = 'Share with';
 $string['accesslist'] = 'Access list';
+$string['defaultaccesslistmessage'] = 'Nobody besides you can view your selected pages / collections. Add people to give them access.';
 $string['sharewithmygroups'] = 'Share with my groups';
 $string['sharewithmyinstitutions'] = 'Share with my institutions';
 $string['sharewithusers'] = 'Share with users';
@@ -165,10 +159,21 @@ $string['moreoptions'] = 'Advanced options';
 $string['moreinstitutions'] = 'More institutions';
 $string['allviews'] = 'All pages';
 
+$string['addaccess'] = 'Add access for "%s"';
+$string['addaccessinstitution'] = 'Add access for institution "%s"';
+$string['addaccessgroup'] = 'Add access for group "%s"';
+
 $string['submitconfirm'] = 'If you submit \'%s\' to %s for assessment, you will not be able to edit its contents until your tutor has finished marking it. Are you sure you want to submit now?';
 $string['viewsubmitted'] = 'Page submitted';
 $string['collectionsubmitted'] = 'Collection submitted';
-$string['viewsalreadysubmitted'] = 'Some pages in this collection have already been submitted:<br>%s<br>You cannot submit the collection until they have been released.';
+$string['collectionviewsalreadysubmitted'] = "Some pages in this collection have already been submitted: \"%s\"\nYou cannot submit the collection until they have been released, or removed from the collection.";
+$string['viewalreadysubmitted'] = 'This page has already been submitted to another assignment or Mahara group.';
+$string['collectionalreadysubmitted'] = 'This collection has already been submitted to another assignment or Mahara group.';
+$string['collectionsubmissionexceptiontitle'] = 'Could not submit collection';
+$string['collectionsubmissionexceptionmessage'] = 'This collection can not be submitted, for the following reason:';
+$string['cantsubmitemptycollection'] = 'This collection does not contain any pages.';
+$string['viewsubmissionexceptiontitle'] = 'Could not submit page';
+$string['viewsubmissionexceptionmessage'] = 'This page can not be submitted, for the following reason:';
 $string['submitviewtogroup'] = 'Submit \'%s\' to \'%s\' for assessment';
 $string['cantsubmitviewtogroup'] = 'You cannot submit this page to this group for assessment.';
 $string['cantsubmitcollectiontogroup'] = 'You cannot submit this collection.';
@@ -179,8 +184,9 @@ $string['deletespecifiedview'] = 'Delete page "%s"';
 $string['deleteviewconfirm1'] = 'Do you really want to delete this page? It cannot be undone.';
 $string['deleteviewconfirmbackup'] = 'Please consider creating a backup of this page by <a href="%sexport/" target="_blank">exporting</a> it.';
 $string['deleteviewconfirmnote1'] = '<strong>NOTE:</strong> All your files and journal entries that you linked in this page will still be available.<br/>However, any feedback placed on this page will be deleted.';
+$string['deleteviewconfirmnote2'] = 'This page is a part of the collection <a href="%s">"%s"</a>.';
 
-$string['editaccesspagedescription3'] = 'By default, only you can see your collections and pages. You can share pages with others by adding access rules below. You may set multiple items to have identical settings by choosing them from the checkboxes. Once you are done, scroll down and click "Save" to continue.';
+$string['editaccesspagedescription5'] = '<p>You are the only one who can see your pages and collections by default. On this page you decide who can access them besides you. Click the "Add" buttons next to the groups and people with whom you wish to share your pages.</p> <p>Click <a href="#" onclick=\'contextualHelp("","","core","view","editaccess","", $j("#main-column-container h1 .help a")[0]); return false;\'>help</a> for more detailed information.</p>';
 $string['editaccessdescription'] = 'You may set multiple items to have identical settings by choosing them from the checkboxes. Once you are done, scroll down and click "Save" to continue.';
 $string['editaccessgrouppagedescription'] = 'By default, only those group members who can add and edit pages and collections can see group collections and pages. ' . $string['editaccessdescription'];
 $string['editaccessinstitutionpagedescription'] = 'By default, only the administrators of your institution can see your institution collections and pages. ' . $string['editaccessdescription'];
@@ -200,6 +206,7 @@ $string['canteditdontown'] = 'You cannot edit this page because you do not own i
 $string['canteditsubmitted'] = 'You cannot edit this page because it has been submitted for assessment to "%s". You will have to wait until a tutor releases the page.';
 $string['Submitted'] = 'Submitted';
 $string['submittedforassessment'] = 'Submitted for assessment';
+$string['blocknotinview'] = 'The block with ID "%d" is not in the page.';
 
 $string['viewcreatedsuccessfully'] = 'Page created successfully';
 $string['viewaccesseditedsuccessfully'] = 'Page access saved successfully';
@@ -209,6 +216,8 @@ $string['updatedaccessfornumviews'] = 'Access rules were updated for %d page(s)'
 $string['invalidcolumn'] = 'Column %s out of range';
 
 $string['confirmcancelcreatingview'] = 'This page has not been completed. Do you really want to cancel?';
+
+$string['groupviewurltaken'] = 'A page with this URL already exists.';
 
 // view control stuff
 
@@ -236,6 +245,18 @@ $string['blockconfigurationrenderingerror'] = 'Configuration failed because the 
 $string['blocksintructionnoajax'] = 'Select a block and choose where to add it to your page. You can position a block using the arrow buttons in its titlebar.';
 $string['blocksinstructionajax'] = 'This area shows a preview of what your page will look like.<br>Drag blocks below this line to add them to your page layout. You can drag blocks around your page layout to position them.';
 
+$string['addblock'] = 'Add block: %s';
+$string['blockcell'] = 'Cell';
+$string['cellposition'] = 'Row %s Column %s';
+$string['blockorder'] = 'Position';
+$string['blockordertop'] = 'Top of column';
+$string['blockorderafter'] = 'After "%s"';
+$string['rownr'] = 'Row %s';
+$string['nrrows'] = array(
+    '%s row',
+    '%s rows',
+);
+
 $string['addnewblockhere'] = 'Add new block here';
 $string['add'] = 'Add';
 $string['addcolumn'] = 'Add column';
@@ -249,21 +270,35 @@ $string['moveblockup'] = "Move %s block up";
 $string['movethisblockup'] = "Move this block up";
 $string['moveblockright'] = "Move %s block right";
 $string['movethisblockright'] = "Move this block right";
+$string['moveblock'] = 'Move %s block';
+$string['movethisblock'] = 'Move this block';
 $string['Configure'] = 'Configure';
 $string['configureblock'] = 'Configure %s block';
 $string['configurethisblock'] = 'Configure this block';
+$string['closeconfiguration'] = 'Close configuration';
 $string['removeblock'] = 'Remove %s block';
 $string['removethisblock'] = 'Remove this block';
 $string['blocktitle'] = 'Block title';
 
 $string['changemyviewlayout'] = 'Change my page layout';
+$string['createcustomlayout'] = 'Create custom layout';
+$string['createnewlayout'] = 'Create new layout';
+$string['basicoptions'] = 'Basic options';
+$string['advancedoptions'] = 'Advanced options';
 $string['viewcolumnspagedescription'] = 'First, select the number of columns in your page. In the next step, you will be able to change the widths of the columns.';
-$string['viewlayoutpagedescription'] = 'Select how you would like the columns in your page to be laid out.';
+$string['viewlayoutpagedescription'] = 'Select how you would like your page to be laid out.';
 $string['changeviewlayout'] = 'Change my page\'s column layout';
 $string['viewlayoutchanged'] = 'Page layout changed';
 $string['numberofcolumns'] = 'Number of columns';
 $string['changecolumnlayoutfailed'] = 'Could not change the column layout. Someone else may have been editing the layout at the same time. Please try again later.';
-
+$string['changerowlayoutfailed'] = 'Could not change the row layout. Someone else may have been editing the layout at the same time. Please try again later.';
+$string['Row'] = 'Row';
+$string['addarow'] = 'Add a row';
+$string['removethisrow'] = 'Remove this row';
+$string['columnlayout'] = 'Column layout';
+$string['layoutpreview'] = 'Layout preview';
+$string['layoutpreviewimage'] = 'Layout preview image';
+$string['Help'] = 'Help';
 
 $string['by'] = 'by';
 $string['viewtitleby'] = '%s by <a href="%s">%s</a>';
@@ -273,23 +308,38 @@ $string['noblocks'] = 'Sorry, no blocks in this category.';
 $string['timeofsubmission'] = 'Time of submission';
 
 $string['column'] = 'column';
+$string['row'] = 'row';
 $string['columns'] = 'columns';
-$string['100'] = $string['50,50'] = $string['33,33,33'] = $string['25,25,25,25'] = $string['20,20,20,20,20'] = 'Equal widths';
-$string['67,33'] = 'Larger left column';
-$string['33,67'] = 'Larger right column';
-$string['25,50,25'] = 'Larger centre column';
-$string['15,70,15'] = 'Much larger centre column';
-$string['20,30,30,20'] = 'Larger centre columns';
+$string['rows'] = 'rows';
+$string['100'] = '100';
+$string['50,50'] = '50-50';
+$string['33,33,33'] = '33-33-33';
+$string['25,25,25,25'] = '25-25-25-25';
+$string['20,20,20,20,20'] = '20-20-20-20-20';
+$string['67,33'] = '67-33';
+$string['33,67'] = '33-67';
+$string['25,25,50'] = '25-25-50';
+$string['50,25,25'] = '50-25-25';
+$string['25,50,25'] = '25-50-25';
+$string['15,70,15'] = '15-70-15';
+$string['20,30,30,20'] = '20-30-30-20';
 $string['noviewlayouts'] = 'There are no layouts for a %s column page.';
 $string['cantaddcolumn'] = 'You cannot add any more columns to this page.';
 $string['cantremovecolumn'] = 'You cannot remove the last column from this page.';
 
-$string['blocktypecategory.external'] = 'External content';
-$string['blocktypecategory.fileimagevideo'] = 'Files, images and video';
+$string['blocktypecategory.external'] = 'External';
+$string['blocktypecategory.fileimagevideo'] = 'Media';
 $string['blocktypecategory.general'] = 'General';
+$string['blocktypecategory.internal'] = 'Personal info';
+$string['blocktypecategorydesc.external'] = 'Click for external options';
+$string['blocktypecategorydesc.fileimagevideo'] = 'Click for media options';
+$string['blocktypecategorydesc.general'] = 'Click for general options';
+$string['blocktypecategorydesc.internal'] = 'Click for personal info options';
+$string['blocktypecategorydesc.blog'] = 'Click for journal options';
 
 $string['notitle'] = 'No title';
 $string['clickformoreinformation'] = 'Click for more information and to place feedback.';
+$string['detailslinkalt'] = '(Details)';
 
 $string['Browse'] = 'Browse';
 $string['Search'] = 'Search';
@@ -317,11 +367,14 @@ $string['filescopiedfromviewtemplate'] = 'Files copied from %s';
 $string['viewfilesdirname'] = 'viewfiles';
 $string['viewfilesdirdesc'] = 'Files from copied pages';
 $string['thisviewmaybecopied'] = 'Copying is allowed';
+$string['thisviewmaynotbecopied'] = 'Copying is not allowed';
 $string['copythisview'] = 'Copy this page';
 $string['copyview'] = 'Copy page';
 $string['createemptyview'] = 'Create empty page';
 $string['copyaview'] = 'Copy a page';
 $string['copyvieworcollection'] = 'Copy a page or collection';
+$string['confirmcopytitle'] = 'Confirm copy';
+$string['confirmcopydesc'] = 'Please choose which you would like to copy:';
 $string['Untitled'] = 'Untitled';
 $string['copyfornewusers'] = 'Copy for new users';
 $string['copyfornewusersdescription1'] = 'Whenever a new user is created, automatically make a personal copy of the selected pages / collections in the user\'s portfolio.';
@@ -329,8 +382,6 @@ $string['copyfornewmembers'] = 'Copy for new institution members';
 $string['copyfornewmembersdescription1'] = 'Automatically make a personal copy of the selected pages / collections for all new members of %s.';
 $string['copyfornewgroups'] = 'Copy for new groups';
 $string['copyfornewgroupsdescription1'] = 'Make a copy of the selected pages / collections in all new groups with these roles:';
-$string['searchviews'] = 'Search pages';
-$string['searchowners'] = 'Search owners';
 $string['owner'] = 'owner';
 $string['Owner'] = 'Owner';
 $string['owners'] = 'owners';
@@ -350,17 +401,26 @@ $string['viewcopywouldexceedquota'] = 'Copying this page would exceed your file 
 $string['blockcopypermission'] = 'Block copy permission';
 $string['blockcopypermissiondesc'] = 'If you allow other users to copy this page, you may choose how this block will be copied';
 
+// Sort by
+$string['defaultsort'] = '';
+$string['latestcreated'] = 'Date created';
+$string['latestmodified'] = 'Last modified';
+$string['latestviewed'] = 'Last viewed';
+$string['mostvisited'] = 'Most visited';
+$string['mostcomments'] = 'Most feedback';
+
 // View types
 $string['dashboard'] = 'Dashboard';
 $string['profile'] = 'Profile';
 $string['portfolio'] = 'Portfolio';
 $string['grouphomepage'] = 'Group homepage';
 
-$string['grouphomepagedescription'] = 'The Group homepage is the content that appears on the About tab for this group';
+$string['grouphomepagedescription'] = 'The group homepage contains the content that appears on the "About" tab for this group';
 
 // Shared views
-$string['sharedviews'] = 'Shared pages';
+$string['sharedwithme'] = 'Shared with me';
 $string['titleanddescription'] = 'Title, description, tags';
+$string['titleanddescriptionandtagsandowner'] = 'Title, description, tags, owner';
 $string['tagsonly'] = 'Tags only';
 $string['sharedviewsdescription'] = 'This page lists the most recently modified or commented on pages that have been shared with you. They may have been shared with you directly, shared with friends of the owner, or shared with one of your groups.';
 $string['sharedwith'] = 'Shared with';
@@ -368,3 +428,15 @@ $string['Me'] = 'Me';
 
 // Group reports
 $string['sharedby'] = 'Shared by';
+
+// Retractable blocks
+$string['retractable'] = 'Retractable';
+$string['retractabledescription'] = 'Select to allow this block to be retracted when the header is clicked.';
+$string['retractedonload'] = 'Automatically retract';
+$string['retractedonloaddescription'] = 'Select to automatically retract this block.';
+
+// Artefact chooser panel
+$string['textbox1'] = 'Note';
+$string['image'] = 'Image';
+$string['addcontent'] = 'Add Content';
+$string['theme'] = 'Theme';

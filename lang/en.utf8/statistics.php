@@ -1,25 +1,11 @@
 <?php
 /**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2012 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package    mahara
  * @subpackage lang
  * @author     Hugh Davenport <hugh@catalyst.net.nz>, Catalyst IT Ltd
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later
+ * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  *
  */
 
@@ -96,6 +82,7 @@ $string['blocktype_groupinfo'] = 'Block: Group info';
 $string['blocktype_groupmembers'] = 'Block: Group members';
 $string['blocktype_groupviews'] = 'Block: Group pages';
 $string['blocktype_html'] = 'Block: Some HTML';
+$string['blocktype_pdf'] = 'Block: PDF';
 $string['blocktype_image'] = 'Block: Image';
 $string['blocktype_inbox'] = 'Block: My inbox';
 $string['blocktype_internalmedia'] = 'Block: Embedded media';
@@ -110,7 +97,8 @@ $string['blocktype_recentforumposts'] = 'Block: Recent forum posts';
 $string['blocktype_recentposts'] = 'Block: Recent journal entries';
 $string['blocktype_resumefield'] = 'Block: Résumé field';
 $string['blocktype_taggedposts'] = 'Block: Tagged journal entries';
-$string['blocktype_textbox'] = 'Block: Text box';
+$string['blocktype_text'] = 'Block: Text';
+$string['blocktype_textbox'] = 'Block: Note';
 $string['blocktype_wall'] = 'Block: Wall';
 $string['blocktype_watchlist'] = 'Block: Watched pages';
 $string['count_block_instance'] = 'Number of blocks';
@@ -160,6 +148,7 @@ $string['plugin_blocktype_groupinfo_version'] = 'Block type plugin Group info ve
 $string['plugin_blocktype_groupmembers_version'] = 'Block type plugin Group members version';
 $string['plugin_blocktype_groupviews_version'] = 'Block type plugin Group pages version';
 $string['plugin_blocktype_html_version'] = 'Block type plugin Some HTML version';
+$string['plugin_blocktype_html_version'] = 'Block type plugin PDF version';
 $string['plugin_blocktype_image_version'] = 'Block type plugin Image version';
 $string['plugin_blocktype_inbox_version'] = 'Block type plugin Inbox version';
 $string['plugin_blocktype_internalmedia_version'] = 'Block type plugin Embedded media version';
@@ -174,7 +163,7 @@ $string['plugin_blocktype_recentforumposts_version'] = 'Block type plugin Recent
 $string['plugin_blocktype_recentposts_version'] = 'Block type plugin Recent journal posts version';
 $string['plugin_blocktype_resumefield_version'] = 'Block type plugin Single résumé field version';
 $string['plugin_blocktype_taggedposts_version'] = 'Block type plugin Tagged journal entries version';
-$string['plugin_blocktype_textbox_version'] = 'Block type plugin Text box version';
+$string['plugin_blocktype_textbox_version'] = 'Block type plugin Note version';
 $string['plugin_blocktype_wall_version'] = 'Block type plugin Wall version';
 $string['plugin_blocktype_watchlist_version'] = 'Block type plugin Watched pages version';
 $string['plugin_export_html_version'] = 'Export plugin HTML version';

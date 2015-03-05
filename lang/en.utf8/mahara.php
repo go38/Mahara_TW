@@ -1,27 +1,11 @@
 <?php
 /**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package    mahara
  * @subpackage lang
  * @author     Catalyst IT Ltd
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later
+ * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  *
  */
 
@@ -31,15 +15,26 @@ defined('INTERNAL') || die();
 $string['add']     = 'Add';
 $string['addone']  = 'Add one';
 $string['cancel']  = 'Cancel';
+$string['copy'] = 'Copy';
+$string['copytoclipboard']  = 'Copy secret URL to the clipboard';
 $string['delete']  = 'Delete';
+$string['deletespecific'] = 'Delete "%s"';
+$string['deleteitem']  = 'Delete';
+$string['deleted']  = 'deleted';
+$string['moveitemup']  = 'Move up';
+$string['moveitemdown']  = 'Move down';
 $string['edit']    = 'Edit';
+$string['editspecific']    = 'Edit "%s"';
 $string['editing'] = 'Editing';
+$string['settingsspecific'] = 'Settings for "%s"';
+$string['move']    = 'Move';
 $string['save']    = 'Save';
 $string['submit']  = 'Submit';
 $string['update']  = 'Update';
 $string['change']  = 'Change';
 $string['send']    = 'Send';
 $string['go']      = 'Go';
+$string['configfor']     = 'Configuration for';
 $string['default'] = 'Default';
 $string['upload']  = 'Upload';
 $string['complete']  = 'Complete';
@@ -51,16 +46,51 @@ $string['description'] = 'Description';
 $string['remove']  = 'Remove';
 $string['Close'] = 'Close';
 $string['Help'] = 'Help';
+$string['closehelp'] = 'Close help';
 $string['applychanges'] = 'Apply changes';
 $string['general'] = 'General';
+$string['units'] = 'Units';
+$string['status'] = 'Status';
+$string['toggletoolbarson'] = 'Toggle toolbars on. Show full list of buttons';
+$string['toggletoolbarsoff'] = 'Toggle toolbars off. Show basic buttons';
+$string['defaulthint'] = 'Type in a search term';
+$string['imagexofy'] = 'Image {x} of {y}';
+$string['clickformore'] = '(Press \'enter\' to display more information)';
+$string['goto'] = 'Go to \'%s\'';
+$string['gotomore'] = 'Read more...';
+// generic switch state strings.
+$string['on'] = 'On';
+$string['off'] = 'Off';
+$string['yes'] = 'Yes';
+$string['no'] = 'No';
+$string['true'] = 'True';
+$string['false'] = 'False';
+$string['enabled'] = 'Enabled';
+$string['disabled'] = 'Disabled';
+// Objectionable strings.
+$string['complaint'] = 'Complaint';
+$string['notifyadministrator'] = 'Notify administrator';
+$string['notifyadministratorconfirm'] = 'Are you sure you wish to report this page as containing objectionable material?';
+$string['notobjectionable'] = 'Not objectionable';
+$string['reportobjectionablematerial'] = 'Report objectionable material';
+$string['reportsent'] = 'Your report has been sent.';
+// responsive design strings
+$string['tabs'] = 'Tabs';
+$string['tab'] = 'tab';
+$string['selected'] = 'selected';
+$string['admin'] = 'Admin';
+$string['menu'] = 'Menu';
 
-$string['no']     = 'No';
-$string['yes']    = 'Yes';
-$string['none']   = 'None';
 $string['at'] = 'at';
 $string['From'] = 'From';
 $string['To'] = 'To';
+$string['ascending'] = 'Ascending';
+$string['descending'] = 'Descending';
+$string['sortorder'] = 'Sort order of files';
 $string['All'] = 'All';
+$string['none']   = 'None';
+$string['selectall']   = 'Select all';
+$string['selectnone']   = 'Select none';
 
 $string['enable'] = 'Enable';
 $string['disable'] = 'Disable';
@@ -68,6 +98,7 @@ $string['show'] = 'Show';
 $string['hide'] = 'Hide';
 $string['pluginenabled'] = 'The plugin is now visible.';
 $string['plugindisabled'] = 'The plugin has been hidden.';
+$string['plugindisableduser'] = 'The %s plugin has been disabled. Please check with your administrator to have this feature enabled.';
 $string['pluginnotenabled'] = 'Plugin is hidden. You must make the %s plugin visible first.';
 $string['pluginexplainaddremove'] = 'Plugins in Mahara are always installed and can be accessed if users know the URLs and would otherwise have access. Rather than enabling and disabling the functionality, plugins are hidden or made visible by clicking on the \'Hide\' or \'Show\' links beside the plugins below.';
 $string['pluginexplainartefactblocktypes'] = 'When hiding an \'artefact\' type plugin, Mahara also stops the display of the blocks related to it.';
@@ -122,12 +153,15 @@ $string['sortalpha'] = 'Sort tags alphabetically';
 $string['sortfreq'] = 'Sort tags by frequency';
 $string['sortresultsby'] = 'Sort results by:';
 $string['sortedby'] = 'sorted by:';
+$string['sortby'] = 'Sort by:';
 $string['adminfirst'] = 'Admin first';
 $string['nameatoz'] = 'Name A to Z';
 $string['nameztoa'] = 'Name Z to A';
 $string['firstjoined'] = 'First joined';
 $string['lastjoined'] = 'Last joined';
 $string['date'] = 'Date';
+$string['earliest'] = 'Earliest';
+$string['latest'] = 'Latest';
 $string['dateformatguide'] = 'Use the format YYYY/MM/DD';
 $string['dateofbirthformatguide'] = 'Use the format YYYY/MM/DD';
 $string['datetimeformatguide'] = 'Use the format YYYY/MM/DD HH:MM';
@@ -137,6 +171,7 @@ $string['tagfilter_file'] = 'Files';
 $string['tagfilter_image'] = 'Images';
 $string['tagfilter_text'] = 'Text';
 $string['tagfilter_view'] = 'Pages';
+$string['tagfilter_collection'] = 'Collections';
 $string['edittags'] = 'Edit tags';
 $string['selectatagtoedit'] = 'Select a tag to edit';
 $string['edittag'] = 'Edit <a href="%s">%s</a>';
@@ -151,9 +186,26 @@ $string['tagdeletedsuccessfully'] = 'Tag deleted successfully';
 $string['selfsearch'] = 'Search my portfolio';
 $string['resultsperpage'] = 'Results per page';
 
+// License metadata
+$string['license'] = 'License';
+$string['licenseother'] = 'Other license (enter URL)';
+$string['licenseotherurl'] = 'Enter URL';
+$string['licensedesc'] = 'The license for this content.';
+$string['licensenone'] = 'None selected';
+$string['licensenonedetailed'] = '%s has not chosen a license for this content.';
+$string['licensenonedetailedowner'] = 'You have not chosen a license for this content.';
+$string['licensingadvanced'] = 'Advanced licensing';
+$string['licensor'] = 'Licensor';
+$string['licensordesc'] = 'The original licensor for this content.';
+$string['licensorurl'] = 'Original URL';
+$string['licensorurldesc'] = 'The original URL for this content.';
+$string['licensemandatoryerror'] = 'The license field is mandatory.';
+$string['licensenocustomerror'] = 'This is not a permitted license on this site.';
+
 // Quota strings
 $string['quota'] = 'Quota';
 $string['quotausage'] = 'You have used <span id="quota_used">%s</span> of your <span id="quota_total">%s</span> quota.';
+$string['quotausagegroup'] = 'This group has used <span id="quota_used">%s</span> of its <span id="quota_total">%s</span> quota.';
 $string['groupquota'] = 'Group quota';
 
 $string['updatefailed'] = 'Update failed';
@@ -166,6 +218,17 @@ $string['pendingfriend'] = 'pending friend';
 $string['pendingfriends'] = 'pending friends';
 $string['profile'] = 'profile';
 $string['views'] = 'Pages';
+
+// Progress bar sideblock strings
+$string['profilecompleteness'] = 'Profile completion';
+$string['profilecompletenesspreview'] = 'Profile completion preview';
+$string['profilecompletenesstips'] = 'Profile completion tips';
+$string['progressbargenerictask'] = array(
+    0 => 'Add one: %2$s',
+    1 => 'Add %d: %s'
+);
+$string['profilecompletionforwhichinstitution'] = 'for';
+$string['noprogressitems'] = 'No profile completion items for this institution.';
 
 // Online users sideblock strings
 $string['onlineusers'] = 'Online users';
@@ -180,8 +243,8 @@ $string['linksandresources'] = 'Links and resources';
 $string['accesstotallydenied_institutionsuspended'] = 'Your institution %s has been suspended. Until it is unsuspended, you will not be able to log in to %s.
 Please contact your institution for help.';
 $string['accessforbiddentoadminsection'] = 'You are forbidden from accessing the administration section.';
-$string['accountdeleted'] = 'Sorry, your account has been deleted.';
-$string['accountexpired'] = 'Sorry, your account has expired.';
+$string['accountdeleted'] = 'Sorry, your account has been deleted. You can <a href="%scontact.php">contact the site administrator</a>.';
+$string['accountexpired'] = 'Sorry, your account has expired. You can <a href="%scontact.php">contact the site administrator</a> to have it reactivated.';
 $string['accountcreated'] = '%s: New account';
 $string['accountcreatedtext'] = 'Dear %s,
 
@@ -246,7 +309,7 @@ If you wish to extend your account access or have any questions regarding the ab
 
 Regards, %s site administrator';
 $string['accountexpirywarninghtml'] = '<p>Dear %s,</p>
-    
+
 <p>Your account on %s will expire within %s.</p>
 
 <p>We recommend you save the contents of your portfolio using the export tool. Instructions on using this feature may be found within the user guide.</p>
@@ -322,7 +385,7 @@ $string['accountinactivewarninghtml'] = '<p>Dear %s,</p>
 <p>You can prevent your account from becoming inactive by logging in.</p>
 
 <p>Regards, %s site administrator</p>';
-$string['accountsuspended'] = 'Your account has been suspended as of %s. The reason for your suspension is:<blockquote>%s</blockquote>';
+$string['accountsuspended'] = 'Your account has been suspended as of %s.<br />The reason for your suspension is: %s';
 $string['youraccounthasbeensuspended'] = 'Your account has been suspended.';
 $string['youraccounthasbeenunsuspended'] = 'Your account has been unsuspended.';
 $string['changepasswordinfo'] = 'You are required to change your password before you can proceed.';
@@ -336,6 +399,7 @@ $string['cookiesnotenabled'] = 'Your browser does not have cookies enabled or is
 $string['institution'] = 'Institution';
 $string['institutioncontacts'] = '\'%s\' contacts';
 $string['institutionlink'] = '<a href="%s">%s</a>';
+$string['link'] = '<a href="%s">%s</a>';
 $string['loggedoutok'] = 'You have been logged out successfully';
 $string['login'] = 'Login';
 $string['loginfailed'] = 'You have not provided the correct credentials to log in. Please check your username and password are correct.';
@@ -360,7 +424,7 @@ $string['preferredname'] = 'Display name';
 $string['usernamedescription'] = ' ';
 $string['usernamehelp'] = 'The username you have been given to access this system.';
 $string['youaremasqueradingas'] = 'You are masquerading as %s.';
-$string['yournewpassword'] = 'Your new password. Passwords must be at least six characters long. Passwords are case-sensitive and must be different to your username.<br/>
+$string['yournewpassword'] = 'Your new password. Passwords must be at least six characters long. Passwords are case-sensitive and must be different from your username.<br/>
 For good security, consider using a passphrase. A passphrase is a sentence rather than a single word. Consider using a favourite quote or listing two (or more!) of your favourite things separated by spaces.';
 $string['yournewpasswordagain'] = 'Your new password again';
 $string['invalidsesskey'] = 'Invalid session key';
@@ -370,11 +434,15 @@ $string['mustspecifyoldpassword'] = 'You must specify your current password.';
 $string['Site'] = 'Site';
 
 // Misc. register stuff that could be used elsewhere
+$string['profileicon'] = 'Profile image';
+$string['bulkselect'] = 'Select users for editing / reports';
 $string['emailaddress'] = 'Email address';
 $string['emailaddressdescription'] = ' ';
 $string['firstname'] = 'First name';
+$string['firstnameall'] = 'All first names';
 $string['firstnamedescription'] = ' ';
 $string['lastname'] = 'Last name';
+$string['lastnameall'] = 'All last names';
 $string['lastnamedescription'] = ' ';
 $string['studentid'] = 'ID number';
 $string['displayname'] = 'Display name';
@@ -393,6 +461,7 @@ $string['language'] = 'Language';
 $string['itemdeleted'] = 'Item deleted';
 $string['itemupdated'] = 'Item updated';
 $string['approvalrequired'] = 'Approval required';
+$string['authentication'] = 'Authentication';
 
 // Forgot password
 $string['cantchangepassword'] = 'Sorry, you are unable to change your password through this interface - please use your institution\'s interface instead.';
@@ -441,6 +510,7 @@ $string['forgotpassnosuchemailaddressorusername'] = 'The email address or userna
 $string['forgotpassuserusingexternalauthentication'] = 'The user you requested uses an external authentication method. <a href="%s">Ask your administrator</a> for help with changing your password. Or provide another username or email address.';
 $string['forgotpasswordenternew'] = 'Please enter your new password to continue.';
 $string['nosuchpasswordrequest'] = 'No such password request';
+$string['passwordresetexpired'] = 'The password reset key has expired';
 $string['passwordchangedok'] = 'Your password was successfully changed.';
 
 // Reset password when moving from external to internal auth.
@@ -520,9 +590,43 @@ $string['noenddate'] = 'No end date';
 $string['day']       = 'day';
 $string['days']      = 'days';
 $string['weeks']     = 'weeks';
+$string['month']    = 'month';
 $string['months']    = 'months';
 $string['years']     = 'years';
-// Boolean site option
+$string['year']     = 'year';
+
+// Datepicker options
+$string['datepicker_clearText'] = 'Clear';
+$string['datepicker_clearStatus'] = '';
+$string['datepicker_closeText'] = 'Done';
+$string['datepicker_closeStatus'] = 'Close without change';
+$string['datepicker_prevText'] = 'Prev';
+$string['datepicker_prevStatus'] = 'Show the previous month';
+$string['datepicker_nextText'] = 'Next';
+$string['datepicker_nextStatus'] = 'Show the next month';
+$string['datepicker_currentText'] = 'Now';
+$string['datepicker_currentStatus'] = 'Show the current month';
+$string['datepicker_monthNames'] = "['January','February','March','April','May','June','July','August','September','October','November','December']";
+$string['datepicker_monthNamesShort'] = "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']";
+$string['datepicker_monthStatus'] = 'Show a different month';
+$string['datepicker_yearStatus'] = 'See another year';
+$string['datepicker_weekHeader'] = 'Wk';
+$string['datepicker_weekStatus'] = '';
+$string['datepicker_dayNames'] = "['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']";
+$string['datepicker_dayNamesShort'] = "['Sun','Mon','Tue','Wed','Thu','Fri','Sat']";
+$string['datepicker_dayNamesMin'] = "['Su','Mo','Tu','We','Th','Fr','Sa']";
+$string['datepicker_dayStatus'] = 'Using DD as the first day of the week';
+$string['datepicker_dateStatus'] = 'Select DD, MM d, yy';
+$string['datepicker_initStatus'] = 'Choose the date';
+$string['datepicker_timeOnlyTitle'] = 'Select time';
+$string['datepicker_timeText'] = 'Time';
+$string['datepicker_hourText'] = 'Hour';
+$string['datepicker_minuteText'] = 'Minute';
+$string['datepicker_secondText'] = 'Second';
+$string['datepicker_millisecText'] = 'Millisecond';
+$string['datepicker_timezoneText'] = 'Timezone';
+$string['datepicker_amNames'] = "['AM', 'A']";
+$string['datepicker_pmNames'] = "['PM', 'P']";
 
 // Site content pages
 $string['sitecontentnotfound'] = '%s text not available';
@@ -530,8 +634,10 @@ $string['sitecontentnotfound'] = '%s text not available';
 // Contact us form
 $string['name']                     = 'Name';
 $string['email']                    = 'Email';
+$string['emails']                    = 'Emails';
 $string['subject']                  = 'Subject';
 $string['message']                  = 'Message';
+$string['messageoptional']          = 'Message <span class="accessible-hidden">(optional)</span>';
 $string['messagesent']              = 'Your message has been sent';
 $string['nosendernamefound']        = 'No sender name was submitted';
 $string['emailnotsent']             = 'Failed to send contact email. Error message: "%s"';
@@ -542,11 +648,13 @@ $string['processing']     = 'Processing';
 $string['unknownerror']       = 'An unknown error occurred (0x20f91a0)';
 
 // menu
-$string['overview']    = 'Overview';
-$string['home']        = 'Home';
-$string['Content']     = 'Content';
-$string['myportfolio'] = 'Portfolio';
-$string['settings']    = 'Settings';
+$string['skipmenu']     = 'Skip to main content';
+$string['dropdownmenu'] = 'menu';
+$string['overview']     = 'Overview';
+$string['home']         = 'Home';
+$string['Content']      = 'Content';
+$string['myportfolio']  = 'Portfolio';
+$string['settings']     = 'Settings';
 $string['myfriends']          = 'My friends';
 $string['findfriends']        = 'Find friends';
 $string['groups']             = 'Groups';
@@ -590,7 +698,7 @@ $string['confirminvitation'] = 'Confirm invitation';
 $string['joininstitution'] = 'Join institution';
 $string['decline'] = 'Decline';
 $string['requestmembershipofaninstitution'] = 'Request membership of an institution';
-$string['optionalinstitutionid'] = 'Institution ID (optional)';
+$string['optionalinstitutionid'] = 'Institution ID';
 $string['institutionmemberconfirmsubject'] = 'Institution membership confirmation';
 $string['institutionmemberconfirmmessage'] = 'You have been added as a member of %s.';
 $string['institutionmemberrejectsubject'] = 'Institution membership request declined';
@@ -600,6 +708,15 @@ $string['noinstitutionadminfound'] = 'No institution administrators were found.'
 $string['Memberships'] = 'Memberships';
 $string['Requests'] = 'Requests';
 $string['Invitations'] = 'Invitations';
+$string['institutionmembershipfullsubject'] = 'Institution membership quota reached';
+$string['institutionmembershipfullmessagetext'] = 'Hello %s,
+
+The maximum number of users for %s on %s has been reached.
+
+Please clean up existing user accounts or ask to have the maximum number of allowed user accounts increased for this institution. Any site administrator can increase the limit.
+
+Regards,
+The %s Team';
 
 $string['config'] = 'Configuration';
 
@@ -608,6 +725,7 @@ $string['spamtrap'] = 'Spam trap';
 $string['formerror'] = 'There was an error processing your submission. Please try again.';
 $string['formerroremail'] = 'Contact us at %s if you continue to have problems.';
 $string['blacklisteddomaininurl'] = 'A URL in this field contains the blacklisted domain %s.';
+$string['newuserscantpostlinksorimages'] = 'Sorry, newly registered users aren\'t allowed to post links. Please reword your post to remove any links or URLs and try again.';
 
 $string['notinstallable'] = 'Not installable';
 $string['installedplugins'] = 'Installed plugins';
@@ -628,12 +746,14 @@ $string['more...'] = 'More...';
 $string['nohelpfound'] = 'There was no help found for this item.';
 $string['nohelpfoundpage'] = 'There was no help found for this page.';
 $string['couldnotgethelp'] = 'An error occurred trying to retrieve the help page.';
-$string['profileimage'] = 'Profile picture';
+$string['profileimagetext'] = "%s's profile picture";
+$string['profileimagetextanonymous'] = "anonymous profile picture";
 $string['primaryemailinvalid'] = 'Your primary email address is invalid.';
 $string['addemail'] = 'Add email address';
 
 // Search
 $string['search'] = 'Search';
+$string['searchtype'] = 'Search type';
 $string['searchusers'] = 'Search users';
 $string['Query'] = 'Search';
 $string['query'] = 'Search';
@@ -659,10 +779,13 @@ $string['republish'] = 'Publish';
 $string['view'] = 'Page';
 $string['artefactnotpublishable'] = 'Artefact %s is not publishable in page %s';
 $string['nopublishpermissiononartefact'] = 'You do not have permission to publish %s.';
+$string['nopathfound'] = 'No path found for this artefact.';
+$string['cantmoveitem'] = 'Cannot move this artefact.';
 
 $string['belongingto'] = 'Belonging to';
 $string['allusers'] = 'All users';
 $string['attachment'] = 'Attachment';
+$string['editaccess'] = 'Edit access';
 
 // Upload manager
 $string['quarantinedirname'] = 'quarantine';
@@ -672,6 +795,7 @@ $string['clamdeletedfilefailed'] = 'The file could not be deleted.';
 $string['clambroken'] = 'Your administrator has enabled virus checking for file uploads but has misconfigured something. Your file upload was NOT successful. Your administrator was notified so they can fix it. Maybe try uploading this file later.';
 $string['clamemailsubject'] = '%s :: ClamAV notification';
 $string['clamlost'] = 'ClamAV is configured to run on file upload, but the path supplied to ClamAV, %s, is invalid.';
+$string['clamnotset'] = 'You have activated virus checking, but have not set a "Path to ClamAV" value. Virus checking will not take effect until you configure the path to ClamAV by adding a $cfg->pathtoclam value to your config.php file.';
 $string['clamfailed'] = 'ClamAV has failed to run. The return error message was %s. Here is the output from ClamAV:';
 $string['clamunknownerror'] = 'There was an unknown error with ClamAV.';
 $string['image'] = 'Image';
@@ -682,7 +806,7 @@ $string['virusfounduser'] = 'The file you have uploaded, %s, has been scanned by
 $string['fileunknowntype'] = 'The type of your uploaded file could not be determined. Your file may be corrupted, or it could be a configuration problem. Please contact your administrator.';
 $string['virusrepeatsubject'] = 'Warning: %s is a repeat virus uploader.';
 $string['virusrepeatmessage'] = 'The user %s has uploaded multiple files which have been scanned by a virus checker and found to be infected.';
-
+$string['exportfiletoobig'] = 'The file about to be generated will be too big. Please clear some disk space.';
 $string['phpuploaderror'] = 'An error occurred during file upload: %s (Error code %s).';
 $string['phpuploaderror_1'] = 'The uploaded file exceeds the upload_max_filesize directive in php.ini.';
 $string['phpuploaderror_2'] = 'The uploaded file exceeds the max_file_size directive that was specified in the HTML form.';
@@ -958,7 +1082,6 @@ $string['done'] = 'Done';
 $string['back'] = 'Back';
 $string['backto'] = 'Back to %s';
 $string['alphabet'] = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z';
-$string['formatpostbbcode'] = 'You can format your post using BBCode. %sLearn more%s';
 $string['Created'] = 'Created';
 $string['Updated'] = 'Updated';
 $string['Total'] = 'Total';
@@ -974,6 +1097,7 @@ $string['hidden'] = 'hidden';
 $string['lastupdate'] = 'Last update';
 $string['lastupdateorcomment'] = 'Last update or comment';
 $string['Title'] = 'Title';
+$string['anonymoususer'] = '(Author\'s name hidden)';
 
 // import related strings (maybe separated later)
 $string['importedfrom'] = 'Imported from %s';
@@ -992,7 +1116,7 @@ $string['profiledescription'] = 'Your profile page is what others see when they 
 
 // Dashboard views
 $string['mydashboard'] = 'My dashboard';
-$string['editdashboard'] = 'Edit';
+$string['editdashboard'] = 'Edit dashboard';
 $string['usersdashboard'] = "%s's dashboard";
 $string['dashboarddescription'] = 'Your dashboard page is what you see on the homepage when you first log in. Only you have access to it.';
 $string['topicsimfollowing'] = "Topics I am following";
@@ -1006,29 +1130,25 @@ $string['theme'] = 'Theme';
 $string['choosetheme'] = 'Choose theme...';
 
 // Homepage info block
-$string['Hide'] = 'Hide';
-$string['createcollect'] = 'Create and collect';
-$string['createcollectsubtitle'] = 'Develop your portfolio';
-$string['updateyourprofile'] = 'Update your <a href="%s">profile</a>';
-$string['uploadyourfiles'] = 'Upload your <a href="%s">files</a>';
-$string['createyourresume'] = 'Create your <a href="%s">résumé</a>';
-$string['publishablog'] = 'Publish a <a href="%s">journal</a>';
-$string['Organise'] = 'Organise';
-$string['organisesubtitle'] = 'Showcase your portfolio';
-$string['organisedescription'] = 'Organise your portfolio into <a href="%s">pages.</a> Create different pages for different audiences - you choose the elements to include.';
-$string['sharenetwork'] = 'Share and network';
-$string['sharenetworksubtitle'] = 'Find friends and join groups';
-$string['findfriendslinked'] = 'Find <a href="%s">friends</a>';
-$string['joingroups'] = 'Join <a href="%s">groups</a>';
-$string['controlyourprivacylinked'] = 'Control your <a href="%s">privacy</a>';
-$string['discusstopicslinked'] = 'Discuss <a href="%s">topics</a>';
-$string['howtodisable'] = 'You have hidden the information box. You can control its visibility in <a href="%s">Settings</a>.';
+$string['Hide2'] = 'Hide information box';
+$string['create'] = 'Create';
+$string['createsubtitle'] = 'Develop your portfolio';
+$string['createdetail'] = 'Create your electronic portfolio in a flexible personal learning environment';
+$string['share'] = 'Share';
+$string['sharesubtitle'] = 'Control your privacy';
+$string['sharedetail'] = 'Share your achievements and development in a space you control';
+$string['engage'] = 'Engage';
+$string['engagesubtitle'] = 'Find people and join groups';
+$string['engagedetail'] = 'Engage with other people in discussion forums and collaborate with them in groups';
+$string['howtodisable'] = 'You have hidden the information box. You can control its visibility in <a
+href="%s">Settings</a>.';
 
 // Blocktype
 $string['setblocktitle'] = 'Set a block title';
 
 // Download
 $string['filenotfound'] = 'File not found';
+$string['filenotfoundmaybeexpired'] = 'File not found. Your export file only exists for 24 hours after it was created. You will need to export your content again.';
 
 $string['betweenxandy'] = 'Between %s and %s';
 
@@ -1046,3 +1166,20 @@ $string['artefacts'] = 'Artefacts';
 $string['posts'] = 'Posts';
 $string['facebookdescription'] = 'Mahara is an open source ePortfolio and social networking web application.
 It provides users with tools to create and maintain a digital portfolio of their learning and social networking features to allow users to interact with each other.';
+
+// Form change checker
+$string['wanttoleavewithoutsaving?'] = 'You have made changes - do you want to leave the page without saving them?';
+
+// TinyMCE maharaimage plugin
+$string['attachedimage'] = 'Attached image';
+$string['imagebrowsertitle'] = 'Insert or Select an Image';
+$string['imagebrowserdescription'] = 'Paste in the URL of an external image or use the image browser below to select or upload your own image.';
+$string['url'] = 'Image URL';
+$string['style'] = 'Style (CSS)';
+$string['dimensions'] = 'Dimensions';
+$string['constrain'] = 'Constrain?';
+$string['vspace'] = 'Vertical space';
+$string['hspace'] = 'Horizontal space';
+$string['border'] = 'Border width';
+$string['alignment'] = 'Alignment';
+

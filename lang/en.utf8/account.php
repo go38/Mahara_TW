@@ -1,27 +1,11 @@
 <?php
 /**
- * Mahara: Electronic portfolio, weblog, resume builder and social networking
- * Copyright (C) 2006-2009 Catalyst IT Ltd and others; see:
- *                         http://wiki.mahara.org/Contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package    mahara
  * @subpackage core
  * @author     Catalyst IT Ltd
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2006-2009 Catalyst IT Ltd http://catalyst.net.nz
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL version 3 or later
+ * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  *
  */
 
@@ -51,10 +35,10 @@ $string['friendsdescr'] = 'Friends control';
 $string['updatedfriendcontrolsetting'] = 'Updated friends control';
 
 $string['wysiwygdescr'] = 'HTML editor';
-$string['on'] = 'On';
-$string['off'] = 'Off';
-$string['disabled'] = 'Disabled';
-$string['enabled'] = 'Enabled';
+
+$string['licensedefault'] = 'Default license';
+$string['licensedefaultdescription'] = 'The default license for your content.';
+$string['licensedefaultinherit'] = 'Use the institution default';
 
 $string['messagesdescr'] = 'Messages from other users';
 $string['messagesnobody'] = 'Do not allow anyone to send me messages';
@@ -74,8 +58,11 @@ $string['enablemultipleblogsdescription']  = 'By default, you have one journal. 
 $string['hiderealname'] = 'Hide real name';
 $string['hiderealnamedescription'] = 'Check this box if you have set a display name and do not want other users to be able to find you by your real name in user searches.';
 
-$string['showhomeinfo1'] = 'Homepage information';
-$string['showhomeinfodescription'] = 'Display information about how to use %s on the homepage.';
+$string['showhomeinfo2'] = 'Dashboard information';
+$string['showhomeinfodescription1'] = 'Display information about how to use %s on the dashboard.';
+
+$string['showprogressbar'] = 'Profile completion progress bar';
+$string['showprogressbardescription'] = 'Display progress bar and tips on how to complete your %s profile.';
 
 $string['mobileuploadtoken'] = 'Mobile upload token';
 $string['badmobileuploadtoken'] = 'Sorry that mobile upload token is invalid. Tokens must be at least 6 characters long.';
