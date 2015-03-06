@@ -1110,7 +1110,7 @@ function full_name($user=null) {
         $user->deleted   = $USER->get('deleted');
     }
 
-    return isset($user->deleted) && $user->deleted ? get_string('deleteduser') : $user->firstname . ' ' . $user->lastname;
+    return isset($user->deleted) && $user->deleted ? get_string('deleteduser') : $user->lastname . ' ' . $user->firstname;
 }
 
 /**
